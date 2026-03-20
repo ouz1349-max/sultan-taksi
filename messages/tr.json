@@ -1,0 +1,46 @@
+{
+  "Hero": {
+    "title": "ADANA'NIN TAKSİSİ",
+    "subtitle": "7/24 Güvenli Transfer · Şehrin Her Noktasına",
+    "ctaCall": "Hemen Ara",
+    "ctaWhatsapp": "WhatsApp'tan Yaz"
+  },
+  "Features": {
+    "title": "Neden Sultan Taksi?",
+    "service724": {
+      "title": "7/24 Hizmet",
+      "description": "Günün her saati, ihtiyacınız olduğu her an yanınızdayız."
+    },
+    "safe": {
+      "title": "Güvenli & Sigortalı",
+      "description": "Yolculuğunuz boyunca tam güvence altındasınız."
+    },
+    "allAdana": {
+      "title": "Adana'nın Her Noktasına",
+      "description": "Adana'nın tüm ilçelerine kesintisiz ulaşım sağlıyoruz."
+    },
+    "experienced": {
+      "title": "Deneyimli Sürücü",
+      "description": "Profesyonel ve güler yüzlü ekibimizle hizmetinizdeyiz."
+    }
+  },
+  "Stats": {
+    "google": "4.9 ★ Google Puanı",
+    "reviews": "22 Mutlu Yolcu Yorumu",
+    "service": "7/24 Kesintisiz Hizmet",
+    "regions": "Adana'nın Tüm İlçeleri"
+  },
+  "Testimonials": {
+    "title": "Müşterilerimiz Ne Diyor?",
+    "subtitle": "Google'daki 4.9 puanımızla gurur duyuyoruz."
+  },
+  "Map": {
+    "title": "Hizmet Bölgemiz",
+    "subtitle": "Adana'nın tüm ilçelerine hizmet veriyoruz."
+  },
+  "Footer": {
+    "ctaTitle": "Hemen Arayın",
+    "address": "Reşatbey, 01119 Çukurova/Adana",
+    "copy": "© 2025 Sultan Taksi"
+  }
+}
