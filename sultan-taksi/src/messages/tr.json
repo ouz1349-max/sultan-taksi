@@ -1,0 +1,73 @@
+﻿{
+  "common": {
+    "brand": "Sultan Taksi",
+    "fullName": "Kenan Evren Sultan Taksi",
+    "phone": "0530 222 77 95",
+    "whatsapp": "0530 222 77 95",
+    "address": "Reşatbey, 01119 Çukurova/Adana"
+  },
+  "hero": {
+    "badge": "Premium Transfer Deneyimi",
+    "title1": "ADANA'NIN",
+    "title2": "TAKSİSİ",
+    "subtitle": "7/24 Güvenli, Konforlu ve Hızlı Ulaşım",
+    "ctaCall": "Hemen Ara",
+    "ctaWhatsapp": "WhatsApp'tan Yaz",
+    "trust1Title": "Güvenli Sürüş",
+    "trust1Desc": "Lisanslı sürücüler ve düzenli araç bakımı.",
+    "trust2Title": "7/24 Erişim",
+    "trust2Desc": "Ortalama 8-12 dakikada araç yönlendirme.",
+    "trust3Title": "4.9 Google Puanı",
+    "trust3Desc": "Adana'da yolcuların en çok tavsiye ettiği duraklardan."
+  },
+  "features": {
+    "title": "Neden Sultan Taksi?",
+    "f1": { "title": "7/24 Hizmet", "desc": "Günün her saati emrinizdeyiz." },
+    "f2": { "title": "Güvenli ve Sigortalı", "desc": "Huzurlu yolculuk garantisi." },
+    "f3": { "title": "Adana'nın Her Noktasına", "desc": "Tüm ilçelere hızlı ulaşım." },
+    "f4": { "title": "Deneyimli Sürücüler", "desc": "Şehri en iyi bilen kaptanlar." }
+  },
+  "stats": {
+    "googleScore": "4.9 Google Puanı",
+    "reviews": "22 Mutlu Yolcu Yorumu",
+    "service": "7/24 Kesintisiz Hizmet",
+    "coverage": "Adana'nın Tüm İlçeleri"
+  },
+  "testimonials": {
+    "badge": "Gerçek Deneyimler",
+    "title": "Müşteri Yorumları",
+    "r1": "Hızlı geldi ve araç çok temizdi. Teşekkürler.",
+    "r2": "Adana'da güvendiğim tek durak. 7/24 ulaşabiliyorum.",
+    "r3": "Kaptan çok nazik, sürüşü çok güvenliydi.",
+    "seeOnGoogle": "Google yorumlarını görüntüle"
+  },
+  "map": {
+    "badge": "Hızlı Erişim",
+    "title": "Hizmet Bölgemiz",
+    "desc": "Adana'nın tüm ilçelerine hizmet veriyoruz.",
+    "area1": "Kenan Evren ve Güzelyalı",
+    "area2": "Seyhan ve Yüreğir",
+    "area3": "Adana Havalimanı (ADA)",
+    "locationLabel": "Konum",
+    "openMap": "Haritada Aç"
+  },
+  "faq": {
+    "badge": "Bilmeniz Gerekenler",
+    "title": "Sık Sorulan Sorular",
+    "q1": "Gece saatlerinde de hizmet veriyor musunuz?",
+    "a1": "Evet. Sultan Taksi 7/24 aktif çalışır ve gece çağrılarında da araç yönlendirmesi yapar.",
+    "q2": "Araçlar ortalama kaç dakikada geliyor?",
+    "a2": "Yoğunluğa göre değişmekle birlikte merkez bölgelerde ortalama 8-12 dakikada araç ulaşır.",
+    "q3": "Havalimanı transferi yapıyor musunuz?",
+    "a3": "Evet. Adana Havalimanı (ADA) gidiş-dönüş transfer hizmeti sunuyoruz.",
+    "q4": "Ödeme nasıl yapılıyor?",
+    "a4": "Nakit ödeme yapabilirsiniz. Kartlı ödeme için çağrı sırasında bilgi vererek uygun araç talep edebilirsiniz."
+  },
+  "footer": {
+    "rights": "Tüm Hakları Saklıdır.",
+    "description": "Adana'nın lüks ve güvenilir transfer noktası. 7/24 kesintisiz hizmet ile yanınızdayız.",
+    "languageTitle": "Language / Dil",
+    "langTr": "TÜRKÇE",
+    "langEn": "ENGLISH"
+  }
+}

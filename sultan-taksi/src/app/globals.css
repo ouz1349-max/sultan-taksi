@@ -1,0 +1,201 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #090b10;
+  --color-bg-secondary: #111723;
+  --color-gold: #d7b05b;
+  --color-gold-light: #f0cb79;
+  --color-text: #f6f2e8;
+
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-barlow), sans-serif;
+}
+
+:root {
+  --bg-primary: #090b10;
+  --bg-secondary: #111723;
+  --gold: #d7b05b;
+  --gold-light: #f0cb79;
+  --text: #f6f2e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 15% -10%, rgba(215, 176, 91, 0.24), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(66, 97, 146, 0.2), transparent 42%),
+    linear-gradient(180deg, #080a0f 0%, #090b10 40%, #0e1320 100%);
+  color: var(--text);
+  font-family: var(--font-barlow), sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-playfair), serif;
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-shell::before,
+.site-shell::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.site-shell::before {
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(circle at 50% 10%, black 10%, transparent 78%);
+  opacity: 0.3;
+}
+
+.site-shell::after {
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(215, 176, 91, 0.22), transparent 65%);
+  top: -180px;
+  right: -120px;
+  filter: blur(10px);
+  animation: float-glow 10s ease-in-out infinite;
+}
+
+.glass-panel {
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(215, 176, 91, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.shine-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-button::after {
+  content: "";
+  position: absolute;
+  top: -140%;
+  left: -30%;
+  width: 40%;
+  height: 320%;
+  transform: rotate(25deg);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: left 0.7s ease;
+}
+
+.shine-button:hover::after {
+  left: 120%;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(100deg, #f6d588 0%, #d7b05b 40%, #b78938 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-bg-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+@keyframes pulse-gold {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(215, 176, 91, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(215, 176, 91, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(215, 176, 91, 0);
+  }
+}
+
+@keyframes float-glow {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(16px) translateX(-22px);
+  }
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+.float-soft {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 86px;
+  }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .hero-bg-image {
+    background-size: 235% auto;
+    background-position: 72% 52%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold), #a97a28);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
