@@ -1,6 +1,6 @@
 ﻿{
   "common": {
-    "brand": "Sultan Taxi",
+    "brand": "Kenan Evren Sultan Taxi",
     "fullName": "Kenan Evren Sultan Taxi",
     "phone": "+90 530 222 77 95",
     "whatsapp": "+90 530 222 77 95",
@@ -21,18 +21,18 @@
     "trust3Desc": "Highly recommended by passengers across Adana."
   },
   "features": {
-    "title": "Why Sultan Taxi?",
-    "lead": "Continuous service across Adana with fast response, safe driving, and experienced local drivers.",
+    "title": "Why Kenan Evren Sultan Taxi?",
+    "lead": "Fast response, safe driving, and experienced local drivers within an approximate 2 km service zone around the station.",
     "f1": { "title": "24/7 Service", "desc": "At your service any time of day." },
     "f2": { "title": "Safe and Insured", "desc": "Ride with licensed and insured drivers." },
-    "f3": { "title": "Coverage Across Adana", "desc": "Fast pickup service in all major districts." },
+    "f3": { "title": "Approx. 2 km Service Zone", "desc": "Fast pickup in neighborhoods close to the station." },
     "f4": { "title": "Experienced Drivers", "desc": "Local drivers who know the city well." }
   },
   "stats": {
     "googleScore": "4.9 Google Rating",
     "reviews": "22+ Verified Passenger Reviews",
     "service": "24/7 Uninterrupted Service",
-    "coverage": "All Districts of Adana"
+    "coverage": "2 km Around the Station"
   },
   "testimonials": {
     "badge": "Verified Experiences",
@@ -45,10 +45,10 @@
   "map": {
     "badge": "Fast Access",
     "title": "Our Service Area",
-    "desc": "We provide fast taxi service across Adana districts.",
-    "area1": "Kenan Evren and Güzelyalı",
-    "area2": "Seyhan and Yüreğir",
-    "area3": "Adana Airport (ADA)",
+    "desc": "Kenan Evren Sultan Taxi serves an approximate 2 km radius around the station.",
+    "area1": "Kenan Evren area",
+    "area2": "Güzelyalı and nearby points",
+    "area3": "Approximate 2 km service radius",
     "locationLabel": "Location",
     "openMap": "Open in Maps"
   },
@@ -59,14 +59,14 @@
     "a1": "Yes. Sultan Taxi operates 24/7, including late-night hours.",
     "q2": "How long does it usually take for a taxi to arrive?",
     "a2": "Depending on traffic, average arrival time is around 8-12 minutes in central areas.",
-    "q3": "Do you provide airport transfers?",
-    "a3": "Yes. We provide round-trip transfers to and from Adana Airport (ADA).",
+    "q3": "What is your service area?",
+    "a3": "We serve approximately within a 2 km area around our station. Requests from farther locations are handled based on availability.",
     "q4": "What payment methods are available?",
     "a4": "Cash is accepted. For card payment, let us know during your call so we can send a suitable car."
   },
   "footer": {
     "rights": "All Rights Reserved.",
-    "description": "Reliable taxi service in Adana with 24/7 availability.",
+    "description": "Kenan Evren Sultan Taxi provides reliable 24/7 service within an approximate 2 km service zone.",
     "languageTitle": "Language",
     "legalTitle": "Legal",
     "kvkk": "Privacy Notice (KVKK)",

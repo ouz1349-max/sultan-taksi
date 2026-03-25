@@ -19,9 +19,9 @@ export default async function IndexPage({
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Kenan Evren Sultan Taksi',
-    image: 'https://sultantaksiadana.com/images/hero.png',
-    '@id': 'https://sultantaksiadana.com',
-    url: 'https://sultantaksiadana.com',
+    image: 'https://sultan-taksi.vercel.app/images/hero.png',
+    '@id': 'https://sultan-taksi.vercel.app',
+    url: 'https://sultan-taksi.vercel.app',
     telephone: '+905302227795',
     priceRange: '₺₺',
     address: {
@@ -36,12 +36,7 @@ export default async function IndexPage({
       latitude: 36.99596464522967,
       longitude: 35.31295965406494
     },
-    areaServed: [
-      'Çukurova',
-      'Seyhan',
-      'Yüreğir',
-      'Sarıçam'
-    ],
+    areaServed: 'Kenan Evren çevresi (yaklaşık 2 km hizmet alanı)',
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: [

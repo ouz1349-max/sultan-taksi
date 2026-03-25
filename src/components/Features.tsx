@@ -6,6 +6,7 @@ import { Clock, ShieldCheck, MapPin, UserCheck } from 'lucide-react';
 
 const Features = () => {
   const t = useTranslations('features');
+  const common = useTranslations('common');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,7 +41,7 @@ const Features = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="section-kicker mb-4">Sultan Taksi</p>
+          <p className="section-kicker mb-4">{common('fullName')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">{t('title')}</h2>
           <p className="max-w-2xl mx-auto text-text/80">{t('lead')}</p>
         </motion.div>

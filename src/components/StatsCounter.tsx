@@ -26,6 +26,7 @@ const Counter = ({ value, decimals = 0 }: { value: number; decimals?: number }) 
 
 const StatsCounter = () => {
   const t = useTranslations('stats');
+  const common = useTranslations('common');
   const locale = useLocale();
 
   const serviceValue = locale === 'tr' ? 7 : 24;
@@ -35,14 +36,14 @@ const StatsCounter = () => {
     { icon: <Star className="text-gold" size={30} />, value: 4.9, suffix: ' ★', decimals: 1, label: t('googleScore') },
     { icon: <Users className="text-gold" size={30} />, value: 22, suffix: '+', decimals: 0, label: t('reviews') },
     { icon: <Clock className="text-gold" size={30} />, value: serviceValue, suffix: serviceSuffix, decimals: 0, label: t('service') },
-    { icon: <Map className="text-gold" size={30} />, value: 15, suffix: '+', decimals: 0, label: t('coverage') }
+    { icon: <Map className="text-gold" size={30} />, value: 2, suffix: ' km', decimals: 0, label: t('coverage') }
   ];
 
   return (
     <section className="py-20 bg-bg-primary relative">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-9">
-          <p className="section-kicker mb-4">Sultan Taksi</p>
+          <p className="section-kicker mb-4">{common('fullName')}</p>
           <div className="section-divider" />
         </div>
         <div className="rounded-3xl p-4 md:p-8 border border-gold/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">

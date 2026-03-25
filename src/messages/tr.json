@@ -1,6 +1,6 @@
 ﻿{
   "common": {
-    "brand": "Sultan Taksi",
+    "brand": "Kenan Evren Sultan Taksi",
     "fullName": "Kenan Evren Sultan Taksi",
     "phone": "0530 222 77 95",
     "whatsapp": "0530 222 77 95",
@@ -21,18 +21,18 @@
     "trust3Desc": "Adana'da yolcuların en çok tavsiye ettiği duraklardan."
   },
   "features": {
-    "title": "Neden Sultan Taksi?",
-    "lead": "Adana genelinde hızlı erişim, güvenli sürüş ve deneyimli sürücü kadrosuyla kesintisiz hizmet.",
+    "title": "Neden Kenan Evren Sultan Taksi?",
+    "lead": "Kenan Evren çevresindeki yaklaşık 2 km hizmet alanında hızlı erişim, güvenli sürüş ve deneyimli sürücü kadrosu.",
     "f1": { "title": "7/24 Hizmet", "desc": "Günün her saati emrinizdeyiz." },
     "f2": { "title": "Güvenli ve Sigortalı", "desc": "Lisanslı ve sigortalı araçlarla güvenli yolculuk." },
-    "f3": { "title": "Adana'nın Her Noktasına", "desc": "Tüm ilçelere hızlı ulaşım." },
+    "f3": { "title": "Yaklaşık 2 km Hizmet Alanı", "desc": "Durak çevresindeki yakın bölgelerde hızlı araç yönlendirme." },
     "f4": { "title": "Deneyimli Sürücüler", "desc": "Şehri en iyi bilen kaptanlar." }
   },
   "stats": {
     "googleScore": "4.9 Google Puanı",
     "reviews": "22 Mutlu Yolcu Yorumu",
     "service": "7/24 Kesintisiz Hizmet",
-    "coverage": "Adana'nın Tüm İlçeleri"
+    "coverage": "Durak Çevresinde 2 km Alan"
   },
   "testimonials": {
     "badge": "Gerçek Deneyimler",
@@ -45,10 +45,10 @@
   "map": {
     "badge": "Hızlı Erişim",
     "title": "Hizmet Bölgemiz",
-    "desc": "Adana'nın tüm ilçelerine hizmet veriyoruz.",
-    "area1": "Kenan Evren ve Güzelyalı",
-    "area2": "Seyhan ve Yüreğir",
-    "area3": "Adana Havalimanı (ADA)",
+    "desc": "Kenan Evren Sultan Taksi, durak çevresindeki yaklaşık 2 km alanda hizmet verir.",
+    "area1": "Kenan Evren çevresi",
+    "area2": "Güzelyalı ve yakın noktalar",
+    "area3": "Yaklaşık 2 km hizmet yarıçapı",
     "locationLabel": "Konum",
     "openMap": "Haritada Aç"
   },
@@ -59,14 +59,14 @@
     "a1": "Evet. Sultan Taksi 7/24 aktif çalışır ve gece çağrılarında da araç yönlendirmesi yapar.",
     "q2": "Araçlar ortalama kaç dakikada geliyor?",
     "a2": "Yoğunluğa göre değişmekle birlikte merkez bölgelerde ortalama 8-12 dakikada araç ulaşır.",
-    "q3": "Havalimanı transferi yapıyor musunuz?",
-    "a3": "Evet. Adana Havalimanı (ADA) gidiş-dönüş transfer hizmeti sunuyoruz.",
+    "q3": "Hizmet alanınız nedir?",
+    "a3": "Durak çevresindeki yaklaşık 2 km alanda hizmet veriyoruz. Daha uzak taleplerde müsaitlik durumuna göre dönüş yapılır.",
     "q4": "Ödeme nasıl yapılıyor?",
     "a4": "Nakit ödeme yapabilirsiniz. Kartlı ödeme için çağrı sırasında bilgi vererek uygun araç talep edebilirsiniz."
   },
   "footer": {
     "rights": "Tüm Hakları Saklıdır.",
-    "description": "Adana'da güvenilir taksi hizmeti. 7/24 kesintisiz ulaşım için yanınızdayız.",
+    "description": "Kenan Evren Sultan Taksi, yaklaşık 2 km hizmet alanında 7/24 güvenilir ulaşım sunar.",
     "languageTitle": "Language / Dil",
     "legalTitle": "Yasal",
     "kvkk": "KVKK Aydınlatma Metni",

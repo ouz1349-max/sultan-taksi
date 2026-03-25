@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sultantaksiadana.com';
+  const baseUrl = 'https://sultan-taksi.vercel.app';
   const locales = ['tr', 'en'] as const;
   const localizedPaths = ['', '/kvkk', '/cerez-politikasi'];
 

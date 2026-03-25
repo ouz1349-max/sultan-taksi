@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sultan Taksi",
-  description: "Adana'nın güvenilir taksi hizmeti.",
+  title: "Kenan Evren Sultan Taksi",
+  description: "Kenan Evren çevresinde yaklaşık 2 km hizmet alanında güvenilir 7/24 taksi hizmeti.",
 };
 
 export default function RootLayout({

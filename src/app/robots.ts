@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://sultantaksiadana.com/sitemap.xml',
+    sitemap: 'https://sultan-taksi.vercel.app/sitemap.xml',
+    host: 'https://sultan-taksi.vercel.app',
   };
 }
