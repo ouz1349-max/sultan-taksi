@@ -10,31 +10,31 @@
     "badge": "Premium Transfer Experience",
     "title1": "ADANA'S",
     "title2": "TAXI",
-    "subtitle": "24/7 Safe, Comfortable and Fast Transportation",
+    "subtitle": "24/7 safe, comfortable, and fast transportation in Adana",
     "ctaCall": "Call Now",
-    "ctaWhatsapp": "Write on WhatsApp",
+    "ctaWhatsapp": "Chat on WhatsApp",
     "trust1Title": "Safe Driving",
     "trust1Desc": "Licensed drivers and regularly maintained cars.",
     "trust2Title": "24/7 Access",
     "trust2Desc": "Average dispatch time is around 8-12 minutes.",
     "trust3Title": "4.9 Google Rating",
-    "trust3Desc": "One of the most recommended taxi stations in Adana."
+    "trust3Desc": "Highly recommended by passengers across Adana."
   },
   "features": {
     "title": "Why Sultan Taxi?",
     "f1": { "title": "24/7 Service", "desc": "At your service any time of day." },
-    "f2": { "title": "Safe and Insured", "desc": "Peaceful journey guarantee." },
-    "f3": { "title": "To Every Point in Adana", "desc": "Fast transport to all districts." },
-    "f4": { "title": "Experienced Drivers", "desc": "Captains who know the city best." }
+    "f2": { "title": "Safe and Insured", "desc": "Ride with licensed and insured drivers." },
+    "f3": { "title": "Coverage Across Adana", "desc": "Fast pickup service in all major districts." },
+    "f4": { "title": "Experienced Drivers", "desc": "Local drivers who know the city well." }
   },
   "stats": {
     "googleScore": "4.9 Google Rating",
-    "reviews": "22 Happy Passenger Reviews",
+    "reviews": "22+ Verified Passenger Reviews",
     "service": "24/7 Uninterrupted Service",
     "coverage": "All Districts of Adana"
   },
   "testimonials": {
-    "badge": "Real Experiences",
+    "badge": "Verified Experiences",
     "title": "Customer Reviews",
     "r1": "Arrived fast and the car was very clean. Thanks.",
     "r2": "The only station I trust in Adana. Available 24/7.",
@@ -44,7 +44,7 @@
   "map": {
     "badge": "Fast Access",
     "title": "Our Service Area",
-    "desc": "We serve all districts of Adana.",
+    "desc": "We provide fast taxi service across Adana districts.",
     "area1": "Kenan Evren and Güzelyalı",
     "area2": "Seyhan and Yüreğir",
     "area3": "Adana Airport (ADA)",
@@ -55,7 +55,7 @@
     "badge": "Good To Know",
     "title": "Frequently Asked Questions",
     "q1": "Do you operate during late-night hours?",
-    "a1": "Yes. Sultan Taxi runs 24/7 and dispatches cars during night hours as well.",
+    "a1": "Yes. Sultan Taxi operates 24/7, including late-night hours.",
     "q2": "How long does it usually take for a taxi to arrive?",
     "a2": "Depending on traffic, average arrival time is around 8-12 minutes in central areas.",
     "q3": "Do you provide airport transfers?",
@@ -65,7 +65,7 @@
   },
   "footer": {
     "rights": "All Rights Reserved.",
-    "description": "Your premium and reliable transfer point in Adana. We are with you 24/7.",
+    "description": "Reliable taxi service in Adana with 24/7 availability.",
     "languageTitle": "Language",
     "legalTitle": "Legal",
     "kvkk": "Privacy Notice (KVKK)",

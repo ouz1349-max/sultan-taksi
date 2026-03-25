@@ -30,31 +30,49 @@ export default async function KvkkPage({
             </p>
 
             <div className="space-y-6 text-text/90 leading-relaxed">
-              <p>
-                {isTr
-                  ? 'Bu internet sitesi, Kenan Evren Sultan Taksi hizmetleri hakkında bilgilendirme sağlamak ve kullanıcıyı telefon/WhatsApp üzerinden iletişime yönlendirmek amacıyla hazırlanmıştır.'
-                  : 'This website is prepared to provide information about Kenan Evren Sultan Taxi services and direct users to contact via phone/WhatsApp.'}
-              </p>
-              <p>
-                {isTr
-                  ? 'Sitede ad-soyad, e-posta veya form yoluyla kişisel veri toplama yapılmamaktadır. Rezervasyon veya talep işlemleri doğrudan telefon ya da WhatsApp üzerinden yürütülür.'
-                  : 'No personal data is collected on this site through name, email, or web forms. Booking and request processes are carried out directly via phone or WhatsApp.'}
-              </p>
-              <p>
-                {isTr
-                  ? 'Sunucu kayıtları, güvenlik ve teknik süreklilik amacıyla IP adresi, tarayıcı bilgisi ve ziyaret zamanı gibi sınırlı teknik verileri otomatik olarak işleyebilir.'
-                  : 'Server logs may process limited technical data such as IP address, browser details, and visit time for security and operational continuity.'}
-              </p>
-              <p>
-                {isTr
-                  ? 'WhatsApp veya telefon üzerinden bizimle paylaşılan kişisel veriler, yalnızca hizmetin yürütülmesi, iletişim sağlanması ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir.'
-                  : 'Personal data shared with us via WhatsApp or phone is processed only for service delivery, communication, and compliance with legal obligations.'}
-              </p>
-              <p>
-                {isTr
-                  ? 'KVKK kapsamındaki talepleriniz için bizimle 0530 222 77 95 numaralı telefondan iletişime geçebilirsiniz.'
-                  : 'For requests under Turkish data protection law (KVKK), you can contact us at +90 530 222 77 95.'}
-              </p>
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  {isTr ? '1. Veri Sorumlusu ve Amaç' : '1. Data Controller and Purpose'}
+                </h2>
+                <p>
+                  {isTr
+                    ? 'Bu internet sitesi, Kenan Evren Sultan Taksi hizmetleri hakkında bilgilendirme sağlamak ve kullanıcıyı telefon/WhatsApp üzerinden iletişime yönlendirmek amacıyla hazırlanmıştır.'
+                    : 'This website provides information about Kenan Evren Sultan Taxi services and directs users to contact via phone or WhatsApp.'}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  {isTr ? '2. Sitede Toplanan Veriler' : '2. Data Collected on the Site'}
+                </h2>
+                <p>
+                  {isTr
+                    ? 'Sitede ad-soyad, e-posta veya form yoluyla kişisel veri toplama yapılmamaktadır. Rezervasyon ve talep işlemleri doğrudan telefon ya da WhatsApp üzerinden yürütülür.'
+                    : 'No personal data is collected on this site through web forms, name fields, or email fields. Booking and requests are handled directly by phone or WhatsApp.'}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  {isTr ? '3. Teknik Log Verileri' : '3. Technical Log Data'}
+                </h2>
+                <p>
+                  {isTr
+                    ? 'Sunucu kayıtları güvenlik ve teknik süreklilik amacıyla IP adresi, tarayıcı bilgisi ve ziyaret zamanı gibi sınırlı teknik verileri otomatik olarak işleyebilir.'
+                    : 'Server logs may process limited technical data such as IP address, browser information, and visit time for security and operational continuity.'}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  {isTr ? '4. İletişim Kanalları ve KVKK Talepleri' : '4. Contact Channels and KVKK Requests'}
+                </h2>
+                <p>
+                  {isTr
+                    ? 'WhatsApp veya telefon üzerinden paylaşılan kişisel veriler yalnızca hizmetin yürütülmesi, iletişim sağlanması ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir. KVKK kapsamındaki talepleriniz için 0530 222 77 95 numarası üzerinden bizimle iletişime geçebilirsiniz.'
+                    : 'Personal data shared via WhatsApp or phone is processed only for service delivery, communication, and legal obligations. For requests under Turkish data protection law (KVKK), contact us at +90 530 222 77 95.'}
+                </p>
+              </div>
             </div>
 
             <div className="mt-10">

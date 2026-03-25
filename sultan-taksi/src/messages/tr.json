@@ -10,20 +10,20 @@
     "badge": "Premium Transfer Deneyimi",
     "title1": "ADANA'NIN",
     "title2": "TAKSİSİ",
-    "subtitle": "7/24 Güvenli, Konforlu ve Hızlı Ulaşım",
+    "subtitle": "Adana'da 7/24 güvenli, konforlu ve hızlı ulaşım",
     "ctaCall": "Hemen Ara",
     "ctaWhatsapp": "WhatsApp'tan Yaz",
     "trust1Title": "Güvenli Sürüş",
     "trust1Desc": "Lisanslı sürücüler ve düzenli araç bakımı.",
     "trust2Title": "7/24 Erişim",
-    "trust2Desc": "Ortalama 8-12 dakikada araç yönlendirme.",
+    "trust2Desc": "Merkez bölgelerde ortalama 8-12 dakikada araç yönlendirme.",
     "trust3Title": "4.9 Google Puanı",
     "trust3Desc": "Adana'da yolcuların en çok tavsiye ettiği duraklardan."
   },
   "features": {
     "title": "Neden Sultan Taksi?",
     "f1": { "title": "7/24 Hizmet", "desc": "Günün her saati emrinizdeyiz." },
-    "f2": { "title": "Güvenli ve Sigortalı", "desc": "Huzurlu yolculuk garantisi." },
+    "f2": { "title": "Güvenli ve Sigortalı", "desc": "Lisanslı ve sigortalı araçlarla güvenli yolculuk." },
     "f3": { "title": "Adana'nın Her Noktasına", "desc": "Tüm ilçelere hızlı ulaşım." },
     "f4": { "title": "Deneyimli Sürücüler", "desc": "Şehri en iyi bilen kaptanlar." }
   },
@@ -65,7 +65,7 @@
   },
   "footer": {
     "rights": "Tüm Hakları Saklıdır.",
-    "description": "Adana'nın lüks ve güvenilir transfer noktası. 7/24 kesintisiz hizmet ile yanınızdayız.",
+    "description": "Adana'da güvenilir taksi hizmeti. 7/24 kesintisiz ulaşım için yanınızdayız.",
     "languageTitle": "Language / Dil",
     "legalTitle": "Yasal",
     "kvkk": "KVKK Aydınlatma Metni",

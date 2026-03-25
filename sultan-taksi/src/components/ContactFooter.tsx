@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useTranslations, useLocale } from 'next-intl';
-import { Phone, MapPin, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, MessageCircle } from 'lucide-react';
 import { Link, usePathname } from '@/i18n/routing';
 
 const ContactFooter = () => {
@@ -20,22 +20,24 @@ const ContactFooter = () => {
             <p className="text-text/65 max-w-sm mb-8 text-lg font-light leading-relaxed">
               {t('footer.description')}
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3">
               <a
-                href="https://www.instagram.com"
+                href="https://maps.google.com/?q=Kenan%20Evren%20Sultan%20Taksi%20Adana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-black transition-all text-sm font-semibold"
               >
-                <Instagram size={20} />
+                <MapPin size={16} />
+                Google Maps
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://wa.me/905302227795"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gold/30 text-gold hover:bg-gold hover:text-black transition-all text-sm font-semibold"
               >
-                <Facebook size={20} />
+                <MessageCircle size={16} />
+                WhatsApp
               </a>
             </div>
           </div>
