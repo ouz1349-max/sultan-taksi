@@ -11,6 +11,43 @@ export default async function AnnouncementsPage({
   setRequestLocale(locale);
 
   const isTr = locale === 'tr';
+  const faqItems = isTr
+    ? [
+        {
+          q: 'Kenan Evren Sultan Taksi hangi bölgede hizmet veriyor?',
+          a: 'Durak çevresindeki yaklaşık 2 km alanda hizmet veriyoruz. Daha uzak talepler için müsaitlik durumuna göre bilgilendirme yapıyoruz.'
+        },
+        {
+          q: 'Araç yönlendirme ne kadar sürüyor?',
+          a: 'Yoğunluğa bağlı olarak hizmet alanımız içinde genellikle kısa sürede araç yönlendirmesi yapıyoruz.'
+        },
+        {
+          q: 'Bize nasıl ulaşabilirsiniz?',
+          a: 'Bize 0530 222 77 95 numarasından telefonla veya WhatsApp üzerinden 7/24 ulaşabilirsiniz.'
+        },
+        {
+          q: 'Neden Kenan Evren Sultan Taksi?',
+          a: 'Hızlı dönüş, net iletişim, güvenli sürüş ve müşteri memnuniyeti odaklı hizmet anlayışımızla bölgedeki yolcuların güvenini kazanıyoruz.'
+        }
+      ]
+    : [
+        {
+          q: 'What area does Kenan Evren Sultan Taxi serve?',
+          a: 'We serve approximately within a 2 km area around our station. Requests from farther locations are handled based on availability.'
+        },
+        {
+          q: 'How quickly can a taxi be dispatched?',
+          a: 'Depending on traffic, we usually dispatch quickly within our core service area.'
+        },
+        {
+          q: 'How can you contact us?',
+          a: 'You can reach us 24/7 by phone at +90 530 222 77 95 or via WhatsApp.'
+        },
+        {
+          q: 'Why choose Kenan Evren Sultan Taxi?',
+          a: 'Passengers choose us for fast response, clear communication, safe driving, and a customer-focused service approach.'
+        }
+      ];
 
   return (
     <main className="site-shell min-h-screen bg-bg-primary">
@@ -67,6 +104,20 @@ export default async function AnnouncementsPage({
                   <p>We are here for fast access, safe driving, and friendly communication.</p>
                 </>
               )}
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-gold/20">
+              <h2 className="text-2xl md:text-3xl font-black text-white mb-5">
+                {isTr ? 'Sık Sorulan Sorular' : 'Frequently Asked Questions'}
+              </h2>
+              <div className="space-y-4">
+                {faqItems.map((item, index) => (
+                  <div key={index} className="rounded-2xl border border-gold/20 bg-[#0f1522]/55 p-4 md:p-5">
+                    <h3 className="text-gold font-bold mb-2">{item.q}</h3>
+                    <p className="text-text/88 leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="mt-10">
