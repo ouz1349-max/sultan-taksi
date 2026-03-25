@@ -22,6 +22,7 @@
   },
   "features": {
     "title": "Why Sultan Taxi?",
+    "lead": "Continuous service across Adana with fast response, safe driving, and experienced local drivers.",
     "f1": { "title": "24/7 Service", "desc": "At your service any time of day." },
     "f2": { "title": "Safe and Insured", "desc": "Ride with licensed and insured drivers." },
     "f3": { "title": "Coverage Across Adana", "desc": "Fast pickup service in all major districts." },

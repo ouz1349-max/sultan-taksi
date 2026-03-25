@@ -11,7 +11,7 @@ const MapSection = () => {
     <section className="py-24 bg-bg-primary overflow-hidden relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,rgba(215,176,91,0.12),transparent_42%)]" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <motion.div
             className="w-full lg:w-1/2"
@@ -20,24 +20,24 @@ const MapSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.75 }}
           >
-            <p className="text-gold uppercase tracking-[0.28em] text-xs mb-3">{t('badge')}</p>
+            <p className="section-kicker mb-4">{t('badge')}</p>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">{t('title')}</h2>
             <p className="text-xl text-text/90 mb-8 max-w-lg leading-relaxed">{t('desc')}</p>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 text-gold font-bold text-lg">
-                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30">
+            <div className="space-y-5 rail-list pl-5">
+              <div className="flex items-center gap-4 text-gold font-bold text-lg rail-item">
+                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30 flex-shrink-0">
                   <MapPin size={18} />
                 </div>
                 {t('area1')}
               </div>
-              <div className="flex items-center gap-4 text-gold font-bold text-lg">
-                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30">
+              <div className="flex items-center gap-4 text-gold font-bold text-lg rail-item">
+                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30 flex-shrink-0">
                   <CarTaxiFront size={18} />
                 </div>
                 {t('area2')}
               </div>
-              <div className="flex items-center gap-4 text-gold font-bold text-lg">
-                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30">
+              <div className="flex items-center gap-4 text-gold font-bold text-lg rail-item">
+                <div className="w-10 h-10 bg-gold/10 rounded-full flex items-center justify-center border border-gold/30 flex-shrink-0">
                   <Plane size={18} />
                 </div>
                 {t('area3')}

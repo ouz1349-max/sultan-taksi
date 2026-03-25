@@ -22,6 +22,7 @@
   },
   "features": {
     "title": "Neden Sultan Taksi?",
+    "lead": "Adana genelinde hızlı erişim, güvenli sürüş ve deneyimli sürücü kadrosuyla kesintisiz hizmet.",
     "f1": { "title": "7/24 Hizmet", "desc": "Günün her saati emrinizdeyiz." },
     "f2": { "title": "Güvenli ve Sigortalı", "desc": "Lisanslı ve sigortalı araçlarla güvenli yolculuk." },
     "f3": { "title": "Adana'nın Her Noktasına", "desc": "Tüm ilçelere hızlı ulaşım." },

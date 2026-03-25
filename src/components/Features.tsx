@@ -33,20 +33,22 @@ const Features = () => {
     <section className="py-24 bg-bg-secondary relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(215,176,91,0.12),transparent_33%)]" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-14"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3">Sultan Taksi</p>
+          <p className="section-kicker mb-4">Sultan Taksi</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">{t('title')}</h2>
-          <div className="w-28 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto rounded-full" />
+          <p className="max-w-2xl mx-auto text-text/80">{t('lead')}</p>
         </motion.div>
 
+        <div className="section-divider mb-10" />
+
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-9 rail-list pl-6 md:pl-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -56,16 +58,16 @@ const Features = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-7 glass-panel rounded-3xl transition-all duration-300 group"
-              whileHover={{ y: -10, rotateX: 3, boxShadow: '0 14px 35px -8px rgba(215,176,91,0.25)' }}
+              className="rail-item group"
+              whileHover={{ x: 4 }}
             >
-              <div className="mb-6 bg-gold/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:bg-gold/20 transition-colors">
+              <div className="mb-4 bg-gold/10 w-12 h-12 flex items-center justify-center rounded-xl group-hover:bg-gold/20 transition-colors">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
                 {t(`${item.key}.title`)}
               </h3>
-              <p className="text-text/75 leading-relaxed font-light">
+              <p className="text-text/75 leading-relaxed max-w-md">
                 {t(`${item.key}.desc`)}
               </p>
             </motion.div>

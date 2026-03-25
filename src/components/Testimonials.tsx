@@ -17,14 +17,14 @@ const Testimonials = () => {
     <section className="py-24 bg-bg-secondary relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(82,132,184,0.14),transparent_35%)]" />
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         <motion.div
-          className="mb-16"
+          className="mb-14 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-gold uppercase tracking-[0.3em] text-xs mb-3">{t('badge')}</p>
+          <p className="section-kicker mb-4">{t('badge')}</p>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">{t('title')}</h2>
           <div className="flex items-center justify-center gap-1 mb-2 text-gold">
             {[...Array(5)].map((_, i) => (
@@ -42,19 +42,21 @@ const Testimonials = () => {
           </a>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="section-divider mb-10" />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <motion.div
               key={index}
-              className="p-7 glass-panel rounded-3xl relative text-left"
+              className="relative text-left pb-8 border-b border-gold/20"
               initial={{ opacity: 0, scale: 0.92, y: 14 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              whileHover={{ y: -8 }}
+              whileHover={{ y: -4 }}
             >
-              <Quote size={38} className="text-gold/25 absolute top-5 right-6" />
-              <p className="text-text/86 italic mb-6 leading-relaxed text-lg">&quot;{review.text}&quot;</p>
+              <Quote size={34} className="text-gold/25 mb-4" />
+              <p className="text-text/86 italic mb-6 leading-relaxed text-lg min-h-[120px]">&quot;{review.text}&quot;</p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold text-sm font-bold">
