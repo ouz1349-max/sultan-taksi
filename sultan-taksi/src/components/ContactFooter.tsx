@@ -82,6 +82,16 @@ const ContactFooter = () => {
                 {t('footer.langEn')}
               </Link>
             </div>
+
+            <h3 className="text-white font-bold mt-8 mb-4 uppercase tracking-widest text-sm">{t('footer.legalTitle')}</h3>
+            <div className="flex flex-col gap-3">
+              <Link href="/kvkk" locale={locale} className="text-sm font-semibold text-text/70 hover:text-gold transition-colors">
+                {t('footer.kvkk')}
+              </Link>
+              <Link href="/cerez-politikasi" locale={locale} className="text-sm font-semibold text-text/70 hover:text-gold transition-colors">
+                {t('footer.cookies')}
+              </Link>
+            </div>
           </div>
         </div>
 
