@@ -58,14 +58,14 @@
   "faq": {
     "badge": "Good To Know",
     "title": "Frequently Asked Questions",
-    "q1": "What area does Kenan Evren Sultan Taxi serve?",
-    "a1": "We serve approximately within a 2 km area around our station. Requests from farther locations are handled based on availability.",
-    "q2": "How quickly can a taxi be dispatched?",
-    "a2": "Depending on traffic, we usually dispatch quickly within our core service area.",
-    "q3": "How can you contact us?",
-    "a3": "You can reach us 24/7 by phone at +90 530 222 77 95 or via WhatsApp.",
-    "q4": "Why choose Kenan Evren Sultan Taxi?",
-    "a4": "Passengers choose us for fast response, clear communication, safe driving, and a customer-focused service approach."
+    "q1": "Do you operate during late-night hours?",
+    "a1": "Yes. Sultan Taxi operates 24/7, including late-night hours.",
+    "q2": "How long does it usually take for a taxi to arrive?",
+    "a2": "Depending on traffic, average arrival time is around 8-12 minutes in central areas.",
+    "q3": "What is your service area?",
+    "a3": "We serve approximately within a 2 km area around our station. Requests from farther locations are handled based on availability.",
+    "q4": "What payment methods are available?",
+    "a4": "Cash is accepted. For card payment, let us know during your call so we can send a suitable car."
   },
   "footer": {
     "rights": "All Rights Reserved.",
