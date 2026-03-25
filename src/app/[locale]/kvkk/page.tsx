@@ -24,53 +24,62 @@ export default async function KvkkPage({
               {isTr ? 'KVKK Aydınlatma Metni' : 'Privacy Notice (KVKK)'}
             </h1>
             <p className="text-text/80 mb-8">
-              {isTr
-                ? 'Son güncelleme: 25 Mart 2026'
-                : 'Last updated: March 25, 2026'}
+              {isTr ? 'Son güncelleme: 25 Mart 2026' : 'Last updated: March 25, 2026'}
             </p>
 
             <div className="space-y-6 text-text/90 leading-relaxed">
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '1. Veri Sorumlusu ve Amaç' : '1. Data Controller and Purpose'}
+                  {isTr ? '1. Veri Sorumlusu' : '1. Data Controller'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Bu internet sitesi, Kenan Evren Sultan Taksi hizmetleri hakkında bilgilendirme sağlamak ve kullanıcıyı telefon/WhatsApp üzerinden iletişime yönlendirmek amacıyla hazırlanmıştır.'
-                    : 'This website provides information about Kenan Evren Sultan Taxi services and directs users to contact via phone or WhatsApp.'}
+                    ? 'Bu site kapsamında veri sorumlusu Kenan Evren Sultan Taksi\'dir. İletişim: 0530 222 77 95, adres: Reşatbey, 01119 Çukurova/Adana.'
+                    : 'For this website, the data controller is Kenan Evren Sultan Taxi. Contact: +90 530 222 77 95, address: Reşatbey, 01119 Çukurova/Adana.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '2. Sitede Toplanan Veriler' : '2. Data Collected on the Site'}
+                  {isTr ? '2. Hangi Veriler İşlenir?' : '2. What Data Is Processed?'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Sitede ad-soyad, e-posta veya form yoluyla kişisel veri toplama yapılmamaktadır. Rezervasyon ve talep işlemleri doğrudan telefon ya da WhatsApp üzerinden yürütülür.'
-                    : 'No personal data is collected on this site through web forms, name fields, or email fields. Booking and requests are handled directly by phone or WhatsApp.'}
+                    ? 'Sitede form bulunmamaktadır; ad-soyad veya e-posta gibi veriler web formu üzerinden toplanmaz. Teknik güvenlik amacıyla sunucu kayıtlarında IP, tarayıcı bilgisi ve ziyaret zamanı gibi sınırlı log verileri işlenebilir.'
+                    : 'There is no web form on this site; data such as full name or email is not collected via forms. For technical security, limited server log data (such as IP, browser information, and visit time) may be processed.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '3. Teknik Log Verileri' : '3. Technical Log Data'}
+                  {isTr ? '3. İşleme Amaçları ve Hukuki Sebep' : '3. Processing Purposes and Legal Basis'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Sunucu kayıtları güvenlik ve teknik süreklilik amacıyla IP adresi, tarayıcı bilgisi ve ziyaret zamanı gibi sınırlı teknik verileri otomatik olarak işleyebilir.'
-                    : 'Server logs may process limited technical data such as IP address, browser information, and visit time for security and operational continuity.'}
+                    ? 'Veriler; hizmetin sağlanması, iletişim süreçlerinin yürütülmesi, güvenliğin sağlanması ve yasal yükümlülüklerin yerine getirilmesi amaçlarıyla işlenir.'
+                    : 'Data is processed for service delivery, communication, security, and compliance with legal obligations.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '4. İletişim Kanalları ve KVKK Talepleri' : '4. Contact Channels and KVKK Requests'}
+                  {isTr ? '4. Üçüncü Taraf Hizmetler' : '4. Third-Party Services'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'WhatsApp veya telefon üzerinden paylaşılan kişisel veriler yalnızca hizmetin yürütülmesi, iletişim sağlanması ve yasal yükümlülüklerin yerine getirilmesi amacıyla işlenir. KVKK kapsamındaki talepleriniz için 0530 222 77 95 numarası üzerinden bizimle iletişime geçebilirsiniz.'
-                    : 'Personal data shared via WhatsApp or phone is processed only for service delivery, communication, and legal obligations. For requests under Turkish data protection law (KVKK), contact us at +90 530 222 77 95.'}
+                    ? 'Sitede Google Maps haritası gösterilebilir ve kullanıcı WhatsApp bağlantısına yönlendirilebilir. Bu servisler kullanıldığında ilgili üçüncü tarafların kendi gizlilik politikaları geçerlidir.'
+                    : 'This site may display Google Maps and redirect users to WhatsApp links. When these services are used, their own privacy policies apply.'}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-white mb-2">
+                  {isTr ? '5. İlgili Kişi Hakları ve Başvuru' : '5. Data Subject Rights and Requests'}
+                </h2>
+                <p>
+                  {isTr
+                    ? 'KVKK kapsamındaki haklarınıza ilişkin taleplerinizi 0530 222 77 95 üzerinden iletebilirsiniz. Talebiniz yürürlükteki mevzuata uygun şekilde değerlendirilir.'
+                    : 'For requests regarding your rights under Turkish data protection law (KVKK), contact +90 530 222 77 95. Requests are handled in line with applicable legislation.'}
                 </p>
               </div>
             </div>

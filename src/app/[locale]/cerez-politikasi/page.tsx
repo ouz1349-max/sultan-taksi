@@ -24,9 +24,7 @@ export default async function CookiePolicyPage({
               {isTr ? 'Çerez Politikası' : 'Cookie Policy'}
             </h1>
             <p className="text-text/80 mb-8">
-              {isTr
-                ? 'Son güncelleme: 25 Mart 2026'
-                : 'Last updated: March 25, 2026'}
+              {isTr ? 'Son güncelleme: 25 Mart 2026' : 'Last updated: March 25, 2026'}
             </p>
 
             <div className="space-y-6 text-text/90 leading-relaxed">
@@ -36,19 +34,19 @@ export default async function CookiePolicyPage({
                 </h2>
                 <p>
                   {isTr
-                    ? 'Bu site form üzerinden kişisel veri toplamaz. Site, bilgilendirme amaçlıdır ve kullanıcıyı telefon/WhatsApp iletişimine yönlendirir.'
-                    : 'This site does not collect personal data through web forms. It is informational and directs users to phone or WhatsApp contact.'}
+                    ? 'Bu internet sitesi bilgilendirme amaçlıdır ve kullanıcıyı telefon/WhatsApp iletişimine yönlendirir. Site üzerinde form tabanlı veri toplama yapılmaz.'
+                    : 'This website is informational and directs users to phone/WhatsApp contact. No form-based data collection is performed on the site.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '2. Kullanılan Çerez Türleri' : '2. Types of Cookies Used'}
+                  {isTr ? '2. Kullanılan Çerezler' : '2. Cookies Used'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Site işlevselliği ve güvenliği için teknik olarak zorunlu olabilecek çerezler veya benzer teknolojiler kullanılabilir.'
-                    : 'Technically necessary cookies or similar technologies may be used for site functionality and security.'}
+                    ? 'Site işlevselliği, güvenlik ve teknik süreklilik için zorunlu olabilecek çerezler veya benzer teknolojiler kullanılabilir.'
+                    : 'Technically necessary cookies or similar technologies may be used for functionality, security, and service continuity.'}
                 </p>
               </div>
 
@@ -58,30 +56,30 @@ export default async function CookiePolicyPage({
                 </h2>
                 <p>
                   {isTr
-                    ? 'Reklam, yeniden hedefleme veya kullanıcı profilleme amacıyla üçüncü taraf pazarlama çerezleri kullanılmamaktadır.'
-                    : 'Third-party marketing cookies for advertising, retargeting, or user profiling are not used.'}
+                    ? 'Bu sitede reklam, yeniden hedefleme veya kullanıcı profilleme amaçlı pazarlama çerezleri kullanılmamaktadır.'
+                    : 'This site does not use marketing cookies for advertising, retargeting, or user profiling.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '4. Tarayıcı Ayarları' : '4. Browser Controls'}
+                  {isTr ? '4. Üçüncü Taraf Servisler' : '4. Third-Party Services'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz. Çerezlerin devre dışı bırakılması bazı teknik fonksiyonları etkileyebilir.'
-                    : 'You can delete or block cookies in your browser settings. Disabling cookies may affect certain technical functions.'}
+                    ? 'Google Maps gömülü haritası veya WhatsApp yönlendirmesi kullanıldığında ilgili platformlar kendi çerez/gizlilik kurallarını uygulayabilir.'
+                    : 'When embedded Google Maps or WhatsApp redirects are used, those platforms may apply their own cookie/privacy rules.'}
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">
-                  {isTr ? '5. Güncellemeler' : '5. Updates'}
+                  {isTr ? '5. Tarayıcı Kontrolleri ve Güncellemeler' : '5. Browser Controls and Updates'}
                 </h2>
                 <p>
                   {isTr
-                    ? 'Bu politika gerektiğinde güncellenebilir. Güncel metin her zaman bu sayfada yayınlanır.'
-                    : 'This policy may be updated when needed. The latest version is always published on this page.'}
+                    ? 'Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz. Politika gerektiğinde güncellenir; güncel sürüm bu sayfada yayınlanır.'
+                    : 'You can delete or block cookies in your browser settings. This policy may be updated when needed; the latest version is always published on this page.'}
                 </p>
               </div>
             </div>
