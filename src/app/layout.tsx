@@ -3,6 +3,11 @@
 export const metadata: Metadata = {
   title: "Kenan Evren Sultan Taksi",
   description: "Kenan Evren çevresinde yaklaşık 2 km hizmet alanında güvenilir 7/24 taksi hizmeti.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
