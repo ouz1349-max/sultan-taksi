@@ -149,6 +149,24 @@ Yapılan deploy adımları:
 - `1305070` - Add root README for repository overview
 - `c5a047d` - Move project to repository root and refresh README
 
+### 12.6 Frontend Cila ve Simetri Revizyonu
+- Hero bölümünde art direction güncellemesi yapıldı:
+  - Poster etkisi ve görsel hiyerarşi güçlendirildi
+  - Başlık + CTA + trust satırı ilişkisi rafine edildi
+- Features ve Testimonials bölümlerinde görsel dil sadeleştirildi:
+  - Kart yoğunluğu azaltıldı
+  - Daha temiz, okunabilir ve premium düzen hedeflendi
+- Simetri odaklı ek düzeltmeler:
+  - Hero arka plan odağında araç daha dengeli konuma çekildi
+  - Hero altındaki bilgilendirme satırı tam merkez hizaya alındı
+  - “Neden Sultan Taksi?” bölümü simetrik 2x2 düzene getirildi
+- Frontend revizyonları production'a yeniden deploy edildi.
+
+### 12.7 Son Commitler (Güncel)
+- `eea2111` - Update project journal and add codex chronological log
+- `2015b36` - Polish frontend art direction and section layout
+- `883ec15` - Improve homepage symmetry in hero and features
+
 ## 13) Şu Anki Durum
 - Site canlıda erişilebilir ve güncel
 - TR/EN içerik akışı büyük oranda tutarlı
