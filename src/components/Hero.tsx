@@ -85,16 +85,16 @@ const Hero = () => {
 
           <div className="max-w-4xl mx-auto border-y border-gold/15 py-5">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-gold mb-1"><ShieldCheck size={17} /> {t('trust1Title')}</div>
+              <div className="text-center px-2">
+                <div className="flex items-center justify-center gap-2 text-gold mb-1"><ShieldCheck size={17} /> {t('trust1Title')}</div>
                 <p className="text-[14px] text-text/85 leading-relaxed">{t('trust1Desc')}</p>
               </div>
-              <div className="text-left sm:border-l sm:border-r sm:border-gold/15 sm:px-5">
-                <div className="flex items-center gap-2 text-gold mb-1"><Clock3 size={17} /> {t('trust2Title')}</div>
+              <div className="text-center px-2 sm:border-l sm:border-r sm:border-gold/15 sm:px-5">
+                <div className="flex items-center justify-center gap-2 text-gold mb-1"><Clock3 size={17} /> {t('trust2Title')}</div>
                 <p className="text-[14px] text-text/85 leading-relaxed">{t('trust2Desc')}</p>
               </div>
-              <div className="text-left">
-                <div className="flex items-center gap-2 text-gold mb-1"><Star size={17} /> {t('trust3Title')}</div>
+              <div className="text-center px-2">
+                <div className="flex items-center justify-center gap-2 text-gold mb-1"><Star size={17} /> {t('trust3Title')}</div>
                 <p className="text-[14px] text-text/85 leading-relaxed">{t('trust3Desc')}</p>
               </div>
             </div>

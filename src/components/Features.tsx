@@ -48,7 +48,7 @@ const Features = () => {
         <div className="section-divider mb-10" />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-9 rail-list pl-6 md:pl-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -58,16 +58,16 @@ const Features = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="rail-item group"
-              whileHover={{ x: 4 }}
+              className="group h-full rounded-2xl border border-gold/20 bg-[linear-gradient(150deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-8 text-center"
+              whileHover={{ y: -4 }}
             >
-              <div className="mb-4 bg-gold/10 w-12 h-12 flex items-center justify-center rounded-xl group-hover:bg-gold/20 transition-colors">
+              <div className="mb-5 bg-gold/10 w-12 h-12 flex items-center justify-center rounded-xl group-hover:bg-gold/20 transition-colors mx-auto">
                 {item.icon}
               </div>
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gold transition-colors">
                 {t(`${item.key}.title`)}
               </h3>
-              <p className="text-text/75 leading-relaxed max-w-md">
+              <p className="text-text/75 leading-relaxed max-w-md mx-auto">
                 {t(`${item.key}.desc`)}
               </p>
             </motion.div>
