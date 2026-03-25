@@ -114,20 +114,55 @@ Yapılan deploy adımları:
   - Commit: `3aa5f95`
   - Mesaj: `Improve SEO/localization, fix hero typography, and refine mobile UX`
 
-## 12) Şu Anki Durum
+## 12) 25 Mart 2026 Güncellemeleri
+### 12.1 Yasal Sayfalar ve Footer
+- KVKK Aydınlatma Metni sayfası eklendi:
+  - `src/app/[locale]/kvkk/page.tsx`
+- Çerez Politikası sayfası eklendi:
+  - `src/app/[locale]/cerez-politikasi/page.tsx`
+- Footer'a yasal linkler eklendi:
+  - `KVKK Aydınlatma Metni`
+  - `Çerez Politikası`
+- Footer'daki genel/placeholder sosyal linkler kaldırıldı; doğrudan dönüşüme hizmet eden bağlantılar eklendi:
+  - Google Maps
+  - WhatsApp
+
+### 12.2 Metin ve Dil Kalitesi Cilası (TR/EN)
+- TR içerikte daha net ve kurumsal anlatım için mikro metin düzenlemeleri yapıldı.
+- EN içerikte doğal olmayan ifadeler revize edildi (örn. `Write on WhatsApp` -> `Chat on WhatsApp`).
+- FAQ, özellik ve footer metinlerinde tutarlılık artırıldı.
+
+### 12.3 Teknik ve Yayın Süreci
+- Lint doğrulamaları tekrar çalıştırıldı, hatasız geçti.
+- Production deploy tekrar alındı ve alias güncellendi:
+  - `https://sultan-taksi.vercel.app`
+- Önemli not: sayaçlar ilk yükleme sırasında animasyon nedeniyle kısa süreli düşük değer gösterebilir; birkaç saniye içinde hedef değerlere (`4.9`, `22+`, `24/7`, `15+`) ulaşır.
+
+### 12.4 Repo Yapısı Düzeltmesi
+- Proje klasörü repo köküne taşındı (`F:\Belgeler\sultantaksi`).
+- Git tarafında taşıma işlemi `rename` olarak işlendi, geçmiş korundu.
+- Kök `README.md` proje odaklı içerikle güncellendi.
+
+### 12.5 25 Mart Commit Özeti
+- `48f61cd` - Add KVKK and cookie policy pages with footer legal links
+- `2c2d4ba` - Polish bilingual copy and legal pages readability
+- `1305070` - Add root README for repository overview
+- `c5a047d` - Move project to repository root and refresh README
+
+## 13) Şu Anki Durum
 - Site canlıda erişilebilir ve güncel
 - TR/EN içerik akışı büyük oranda tutarlı
 - Mobil/masaüstü görsel deneyim optimize edildi
 - Local SEO ve GEO için temel teknik zemin hazır
 
-## 13) Bir Sonraki Adım Önerileri
+## 14) Bir Sonraki Adım Önerileri
 - Google Business Profile tarafının haftalık optimize edilmesi
 - Hizmet bölgesi odaklı ayrı landing sayfaları (`/tr/cukurova-taksi`, vb.)
 - Event tracking (telefon, WhatsApp, harita) ile dönüşüm analizi
 - Düzenli review toplama akışı (QR + kısa link)
 - İçerik günlüğü: aylık Q&A ve yerel rehber yazıları
 
-## 14) Değişiklikten Etkilenen Başlıca Dosyalar
+## 15) Değişiklikten Etkilenen Başlıca Dosyalar
 - `src/app/[locale]/layout.tsx`
 - `src/app/[locale]/page.tsx`
 - `src/app/page.tsx`
@@ -145,6 +180,9 @@ Yapılan deploy adımları:
 - `src/messages/en.json`
 - `public/images/hero.webp`
 - `public/llms.txt`
+- `src/app/[locale]/kvkk/page.tsx`
+- `src/app/[locale]/cerez-politikasi/page.tsx`
+- `README.md`
 
 ---
-Son güncelleme: 22 Mart 2026
+Son güncelleme: 25 Mart 2026
