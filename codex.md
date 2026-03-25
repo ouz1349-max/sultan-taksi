@@ -1,83 +1,58 @@
-# Codex Teknik Kayıt (Kronolojik)
+# Codex Technical Log (Chronological)
 
-Bu dosya, geliştirme sırasında konuşulan ve `proje günlüğü.md` içinde özet geçilmeyen teknik detayları kronolojik olarak kaydeder.
+This file stores chronological implementation notes that are more detailed than `proje gunlugu.md`.
 
-## 22 Mart 2026
+## 2026-03-22
 
-### Başlangıç ve Mimari
-- Proje Next.js + `next-intl` yapısında doğrulandı.
-- Locale yapısı `tr/en` ve root yönlendirmesi (`/` -> `/tr`) kuruldu.
-- Tek sayfa landing akışı netleştirildi:
-  - Hero
-  - Features
-  - Stats
-  - Testimonials
-  - FAQ
-  - Map
-  - Footer
+- Project baseline verified on Next.js + next-intl.
+- Locale routing settled as `/tr` and `/en`, root redirect to `/tr`.
+- Main landing composition stabilized: Hero, Features, Stats, Testimonials, FAQ, Map, Footer.
+- First production deployments completed on Vercel.
 
-### İçerik ve Tasarım Revizyonları
-- TR/EN çeviri dosyaları üzerinde metinler temizlendi.
-- Premium görsel dil, cam panel kartlar, gradient katmanlar ve CTA efektleri stabilize edildi.
-- Mobil aksiyon barı eklendi (Ara + WhatsApp).
-- WhatsApp floating butonu masaüstü/mobil ayrımıyla düzenlendi.
+## 2026-03-25
 
-### SEO ve Teknik Altyapı
-- `LocalBusiness` JSON-LD eklendi/güncellendi.
-- `robots.ts` ve `sitemap.ts` üretimi doğrulandı.
-- AI taraması için `public/llms.txt` eklendi.
-
-### Deploy
-- Vercel üzerinden production yayın alındı.
-
-## 25 Mart 2026
-
-### Hukuki Sayfalar
-- KVKK ve Çerez Politikası sayfaları eklendi:
+- Legal pages added and refined:
   - `src/app/[locale]/kvkk/page.tsx`
   - `src/app/[locale]/cerez-politikasi/page.tsx`
-- Footer'a yasal linkler eklendi.
+- Footer legal links added.
+- Bilingual copy polish completed (TR/EN).
+- Visual polish and symmetry pass completed for Hero and section layouts.
+- Repository moved to root path and README reworked for GitHub landing page.
+- Central project memory files introduced and updated:
+  - `proje gunlugu.md`
+  - `codex.md`
 
-### İçerik Kalitesi ve Güven Unsurları
-- TR/EN metinlerde yazım ve ton iyileştirmesi yapıldı.
-- EN tarafında daha doğal kullanım için önemli ifade düzeltmeleri uygulandı.
-- Footer'daki genel sosyal medya placeholder linkleri kaldırıldı.
-- Yerine daha güvenilir ve dönüşüm odaklı linkler eklendi:
-  - Google Maps
-  - WhatsApp
+## 2026-03-26
 
-### Frontend Cila ve Art Direction
-- Hero bölümünde poster etkisini artırmak için katman, kontrast ve tipografik hiyerarşi güncellendi.
-- Trust alanı kart görünümünden çıkarılıp daha rafine bilgi şeridine dönüştürüldü.
-- Features ve Testimonials bölümlerinde daha editorial akış için düzen sadeleştirildi.
-- Map ve Stats bölümlerinde section dili ve ritim birleştirildi.
+- Service-area messaging aligned to approx. 2 km radius around station.
+- Brand emphasis upgraded to "Kenan Evren Sultan Taksi" / "Kenan Evren Sultan Taxi" across key surfaces.
+- SEO/metadata alignment updates:
+  - `src/app/layout.tsx`
+  - `src/app/[locale]/page.tsx` (JSON-LD)
+  - `src/app/robots.ts`
+  - `src/app/sitemap.ts`
+  - `public/llms.txt`
+- Announcements feature introduced:
+  - top navigation link
+  - footer link
+  - route: `src/app/[locale]/duyurular/page.tsx`
+- Announcement page includes dedicated FAQ block.
+- Homepage FAQ restored to original content set to avoid duplicate FAQ intent.
+- Mobile CTA density reduced:
+  - header WhatsApp hidden on mobile
+  - hero secondary WhatsApp CTA hidden on mobile
+- Favicon set to selected design:
+  - active icon: `public/favicon.svg` (from `favicon-taxi-minimal.svg`)
+  - wired via metadata in `src/app/layout.tsx`
+- FAQ registry added for future anti-duplication workflow:
+  - `sultansss.md`
 
-### Simetri Revizyonu
-- Hero görsel odağı daha ortalanmış kompozisyona çekildi.
-- Hero altındaki 3’lü güven satırı tam merkez hizaya alındı.
-- “Neden Sultan Taksi?” bölümü simetrik 2x2 düzenle güncellendi.
+## Recent commits (latest first)
 
-### Test/Doğrulama Notu
-- `StatsCounter` bölümünde sayılar animasyonlu arttığı için ilk 1-2 saniye düşük değer görülmesi tespit edildi.
-- Kısa bekleme sonrası doğru hedef değerlere ulaştığı doğrulandı.
-
-### Repo ve Git Düzeni
-- Proje klasörü repo köküne taşındı:
-  - Önceki yapı: `F:\Belgeler\sultantaksi\sultan-taksi\...`
-  - Yeni yapı: `F:\Belgeler\sultantaksi\...`
-- Git taşıma işlemini `rename` olarak algıladı; geçmiş korundu.
-- Kök `README.md` proje odaklı içerikle güncellendi.
-
-### 25 Mart Commit Sırası
-- `48f61cd` - Add KVKK and cookie policy pages with footer legal links
-- `2c2d4ba` - Polish bilingual copy and legal pages readability
-- `1305070` - Add root README for repository overview
-- `c5a047d` - Move project to repository root and refresh README
-- `eea2111` - Update project journal and add codex chronological log
-- `2015b36` - Polish frontend art direction and section layout
-- `883ec15` - Improve homepage symmetry in hero and features
-
-### 25 Mart Deploy Notları
-- Production alias doğrulandı: `https://sultan-taksi.vercel.app`
-- Sayfa linkleri (TR/EN + yasal sayfalar) erişilebilir olarak kontrol edildi.
-- Frontend cila ve simetri revizyonları canlıya alındı.
+- `abd300a` Set minimal taxi favicon as site icon
+- `6088539` Fix announcements encoding and add centralized FAQ registry
+- `6824666` Reduce mobile CTA clutter in header and hero
+- `9b7aba8` Restore homepage FAQ content while keeping announcements FAQ
+- `3fa287c` Add FAQ block inside announcements page
+- `8938d8a` Add announcements page, top nav link, and bilingual FAQ refresh
+- `e9243fa` Align service area to 2km and strengthen Kenan Evren branding

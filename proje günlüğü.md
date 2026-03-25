@@ -167,6 +167,22 @@ Yapılan deploy adımları:
 - `2015b36` - Polish frontend art direction and section layout
 - `883ec15` - Improve homepage symmetry in hero and features
 
+### 12.8 26 Mart 2026 - Servis Alanı, Duyurular ve Mobil Sadeleştirme
+- Hizmet alanı mesajları TR/EN içerikte yaklaşık 2 km ile hizalandı.
+- "Kenan Evren Sultan Taksi" marka vurgusu ana metinlerde güçlendirildi.
+- Üst menüye "Duyurular" bağlantısı eklendi ve yeni sayfa açıldı:
+  - `src/app/[locale]/duyurular/page.tsx`
+- Footer'a duyurular linki eklendi.
+- Duyurular sayfasına ayrı bir SSS bloğu eklendi.
+- Ana sayfa SSS içerikleri geri alınarak, duyurular SSS ile çakışma azaltıldı.
+- Mobilde CTA kalabalığını azaltmak için:
+  - Header WhatsApp butonu mobilde gizlendi
+  - Hero içindeki ikincil WhatsApp CTA mobilde gizlendi
+- Favicon güncellendi:
+  - Aktif ikon: `public/favicon.svg` (`favicon-taxi-minimal.svg` seçimi)
+- Tüm SSS içerikleri merkezi kayıt dosyasında toplandı:
+  - `sultansss.md`
+
 ## 13) Şu Anki Durum
 - Site canlıda erişilebilir ve güncel
 - TR/EN içerik akışı büyük oranda tutarlı
@@ -203,4 +219,4 @@ Yapılan deploy adımları:
 - `README.md`
 
 ---
-Son güncelleme: 25 Mart 2026
+Son güncelleme: 26 Mart 2026
