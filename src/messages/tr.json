@@ -6,6 +6,9 @@
     "whatsapp": "0530 222 77 95",
     "address": "Reşatbey, 01119 Çukurova/Adana"
   },
+  "nav": {
+    "announcements": "Duyurular"
+  },
   "hero": {
     "badge": "Premium Transfer Deneyimi",
     "title1": "ADANA'NIN",
@@ -55,20 +58,21 @@
   "faq": {
     "badge": "Bilmeniz Gerekenler",
     "title": "Sık Sorulan Sorular",
-    "q1": "Gece saatlerinde de hizmet veriyor musunuz?",
-    "a1": "Evet. Sultan Taksi 7/24 aktif çalışır ve gece çağrılarında da araç yönlendirmesi yapar.",
-    "q2": "Araçlar ortalama kaç dakikada geliyor?",
-    "a2": "Yoğunluğa göre değişmekle birlikte merkez bölgelerde ortalama 8-12 dakikada araç ulaşır.",
-    "q3": "Hizmet alanınız nedir?",
-    "a3": "Durak çevresindeki yaklaşık 2 km alanda hizmet veriyoruz. Daha uzak taleplerde müsaitlik durumuna göre dönüş yapılır.",
-    "q4": "Ödeme nasıl yapılıyor?",
-    "a4": "Nakit ödeme yapabilirsiniz. Kartlı ödeme için çağrı sırasında bilgi vererek uygun araç talep edebilirsiniz."
+    "q1": "Kenan Evren Sultan Taksi hangi bölgede hizmet veriyor?",
+    "a1": "Durak çevresindeki yaklaşık 2 km alanda hizmet veriyoruz. Daha uzak talepler için müsaitlik durumuna göre bilgilendirme yapıyoruz.",
+    "q2": "Araç yönlendirme ne kadar sürüyor?",
+    "a2": "Yoğunluğa bağlı olarak hizmet alanımız içinde genellikle kısa sürede araç yönlendirmesi yapıyoruz.",
+    "q3": "Bize nasıl ulaşabilirsiniz?",
+    "a3": "Bize 0530 222 77 95 numarasından telefonla veya WhatsApp üzerinden 7/24 ulaşabilirsiniz.",
+    "q4": "Neden Kenan Evren Sultan Taksi?",
+    "a4": "Hızlı dönüş, net iletişim, güvenli sürüş ve müşteri memnuniyeti odaklı hizmet anlayışımızla bölgedeki yolcuların güvenini kazanıyoruz."
   },
   "footer": {
     "rights": "Tüm Hakları Saklıdır.",
     "description": "Kenan Evren Sultan Taksi, yaklaşık 2 km hizmet alanında 7/24 güvenilir ulaşım sunar.",
     "languageTitle": "Language / Dil",
     "legalTitle": "Yasal",
+    "announcements": "Duyurular",
     "kvkk": "KVKK Aydınlatma Metni",
     "cookies": "Çerez Politikası",
     "langTr": "TÜRKÇE",

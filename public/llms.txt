@@ -9,6 +9,8 @@
 ## Pages
 - /tr: Turkish homepage
 - /en: English homepage
+- /tr/duyurular: Turkish announcements
+- /en/duyurular: English announcements
 
 ## What this site is
 Kenan Evren Sultan Taksi is a local taxi service website focused on fast call/WhatsApp booking, limited-area service coverage, customer reviews, and map-based location guidance.
