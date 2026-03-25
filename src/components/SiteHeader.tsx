@@ -28,7 +28,7 @@ const SiteHeader = () => {
               href="https://wa.me/905302227795"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 md:px-4 py-2 rounded-xl bg-gold text-black text-xs md:text-sm font-bold inline-flex items-center gap-1.5 hover:bg-gold-light transition-colors"
+              className="hidden md:inline-flex px-3 md:px-4 py-2 rounded-xl bg-gold text-black text-xs md:text-sm font-bold items-center gap-1.5 hover:bg-gold-light transition-colors"
             >
               <MessageCircle size={15} />
               WhatsApp

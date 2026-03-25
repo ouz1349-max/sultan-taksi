@@ -74,7 +74,7 @@ const Hero = () => {
               href="https://wa.me/905302227795"
               target="_blank"
               rel="noopener noreferrer"
-              className="shine-button flex items-center gap-3 px-10 py-4 glass-panel text-gold font-bold rounded-full hover:border-gold/40 transition-all duration-300 w-full sm:w-auto justify-center text-base min-h-[56px]"
+              className="shine-button hidden sm:flex items-center gap-3 px-10 py-4 glass-panel text-gold font-bold rounded-full hover:border-gold/40 transition-all duration-300 w-full sm:w-auto justify-center text-base min-h-[56px]"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.96 }}
             >
