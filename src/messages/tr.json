@@ -23,6 +23,13 @@
     "trust3Title": "4.9 Google Puanı",
     "trust3Desc": "Adana'da yolcuların en çok tavsiye ettiği duraklardan."
   },
+  "announcementTeaser": {
+    "kicker": "Son Duyuru",
+    "title": "Hizmet alanı ve ulaşım bilgilendirmeleri tek yerde",
+    "description": "Kenan Evren Sultan Taksi ile ilgili en güncel hizmet alanı, ulaşılabilirlik ve operasyon notlarını duyurular sayfasında topluyoruz.",
+    "date": "31 Mart 2026",
+    "cta": "Duyuruları İncele"
+  },
   "features": {
     "title": "Neden Kenan Evren Sultan Taksi?",
     "lead": "Kenan Evren çevresindeki yaklaşık 2 km hizmet alanında hızlı erişim, güvenli sürüş ve deneyimli sürücü kadrosu.",
@@ -58,6 +65,7 @@
   "faq": {
     "badge": "Bilmeniz Gerekenler",
     "title": "Sık Sorulan Sorular",
+    "intro": "Kenan Evren Sultan Taksi ile ilgili en sık sorulan konuları tek ekranda, kısa ve net cevaplarla topladık.",
     "q1": "Gece saatlerinde de hizmet veriyor musunuz?",
     "a1": "Evet. Sultan Taksi 7/24 aktif çalışır ve gece çağrılarında da araç yönlendirmesi yapar.",
     "q2": "Araçlar ortalama kaç dakikada geliyor?",

@@ -23,6 +23,13 @@
     "trust3Title": "4.9 Google Rating",
     "trust3Desc": "Highly recommended by passengers across Adana."
   },
+  "announcementTeaser": {
+    "kicker": "Latest Update",
+    "title": "Service area and access notes in one clear place",
+    "description": "We keep the latest service area details, availability notes, and operating updates for Kenan Evren Sultan Taxi on the announcements page.",
+    "date": "March 31, 2026",
+    "cta": "View Announcements"
+  },
   "features": {
     "title": "Why Kenan Evren Sultan Taxi?",
     "lead": "Fast response, safe driving, and experienced local drivers within an approximate 2 km service zone around the station.",
@@ -58,6 +65,7 @@
   "faq": {
     "badge": "Good To Know",
     "title": "Frequently Asked Questions",
+    "intro": "We gathered the most common questions about Kenan Evren Sultan Taxi in one place with short, direct answers.",
     "q1": "Do you operate during late-night hours?",
     "a1": "Yes. Sultan Taxi operates 24/7, including late-night hours.",
     "q2": "How long does it usually take for a taxi to arrive?",

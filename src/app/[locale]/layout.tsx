@@ -2,7 +2,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
-import WhatsAppButton from '@/components/WhatsAppButton';
 import MobileActionBar from '@/components/MobileActionBar';
 import SiteHeader from '@/components/SiteHeader';
 import { Playfair_Display, Barlow } from 'next/font/google';
@@ -45,7 +44,6 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />
           {children}
-          <WhatsAppButton />
           <MobileActionBar />
         </NextIntlClientProvider>
       </body>

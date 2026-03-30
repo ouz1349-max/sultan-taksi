@@ -1,73 +1,50 @@
 ﻿"use client";
 
-import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
-import { motion, animate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 import { Star, Users, Clock, Map } from 'lucide-react';
-
-const Counter = ({ value, decimals = 0 }: { value: number; decimals?: number }) => {
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const controls = animate(0, value, {
-      duration: 2,
-      onUpdate: (latest) => {
-        if (ref.current) {
-          ref.current.textContent = latest.toFixed(decimals);
-        }
-      }
-    });
-    return () => controls.stop();
-  }, [value, decimals]);
-
-  return <span ref={ref}>0</span>;
-};
 
 const StatsCounter = () => {
   const t = useTranslations('stats');
   const common = useTranslations('common');
   const locale = useLocale();
 
-  const serviceValue = locale === 'tr' ? 7 : 24;
-  const serviceSuffix = locale === 'tr' ? '/24' : '/7';
-
   const statsList = [
-    { icon: <Star className="text-gold" size={30} />, value: 4.9, suffix: ' ★', decimals: 1, label: t('googleScore') },
-    { icon: <Users className="text-gold" size={30} />, value: 22, suffix: '+', decimals: 0, label: t('reviews') },
-    { icon: <Clock className="text-gold" size={30} />, value: serviceValue, suffix: serviceSuffix, decimals: 0, label: t('service') },
-    { icon: <Map className="text-gold" size={30} />, value: 2, suffix: ' km', decimals: 0, label: t('coverage') }
+    { icon: <Star className="text-gold" size={26} />, value: '4.9', label: t('googleScore') },
+    { icon: <Users className="text-gold" size={26} />, value: '22+', label: t('reviews') },
+    { icon: <Clock className="text-gold" size={26} />, value: locale === 'tr' ? '7/24' : '24/7', label: t('service') },
+    { icon: <Map className="text-gold" size={26} />, value: '2 km', label: t('coverage') }
   ];
 
   return (
-    <section className="py-20 bg-bg-primary relative">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="text-center mb-9">
+    <section className="relative bg-bg-primary py-20">
+      <div className="container mx-auto max-w-6xl px-6">
+        <div className="mb-10 text-center">
           <p className="section-kicker mb-4">{common('fullName')}</p>
           <div className="section-divider" />
         </div>
-        <div className="rounded-3xl p-4 md:p-8 border border-gold/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {statsList.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center text-center py-4"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-              >
-                <div className="mb-4 h-12 w-12 rounded-xl bg-gold/10 flex items-center justify-center border border-gold/20">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-black text-white mb-2 font-display">
-                  <Counter value={stat.value} decimals={stat.decimals} />
-                  <span className="text-gold">{stat.suffix}</span>
-                </div>
-                <p className="text-text/65 text-[11px] md:text-sm font-semibold tracking-wider uppercase mt-1 max-w-[170px]">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+
+        <div className="grid gap-6 border-y border-gold/12 py-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 lg:py-8">
+          {statsList.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              className="flex flex-col items-center text-center lg:px-4"
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.08 }}
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full border border-gold/18 bg-gold/8">
+                {stat.icon}
+              </div>
+              <div className="font-display text-[2.7rem] font-bold leading-none tracking-[-0.05em] text-white md:text-[3.25rem]">
+                {stat.value}
+              </div>
+              <p className="mt-3 max-w-[190px] text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-text/56 md:text-xs">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -75,3 +52,4 @@ const StatsCounter = () => {
 };
 
 export default StatsCounter;
+

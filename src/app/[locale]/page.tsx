@@ -1,5 +1,6 @@
 ﻿import { setRequestLocale } from 'next-intl/server';
 import Hero from '@/components/Hero';
+import AnnouncementTeaser from '@/components/AnnouncementTeaser';
 import Features from '@/components/Features';
 import StatsCounter from '@/components/StatsCounter';
 import Testimonials from '@/components/Testimonials';
@@ -62,6 +63,7 @@ export default async function IndexPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
+      <AnnouncementTeaser />
       <Features />
       <StatsCounter />
       <Testimonials />
