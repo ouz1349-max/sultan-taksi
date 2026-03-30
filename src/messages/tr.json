@@ -42,7 +42,11 @@
     "googleScore": "4.9 Google Puanı",
     "reviews": "22 Mutlu Yolcu Yorumu",
     "service": "7/24 Kesintisiz Hizmet",
-    "coverage": "Durak Çevresinde 2 km Alan"
+    "coverage": "Durak Çevresinde 2 km Alan",
+    "d1": "Google yorumlarında istikrarlı memnuniyet",
+    "d2": "Doğrulanmış yolcu geri bildirimleri",
+    "d3": "Günün her saati açık iletişim hattı",
+    "d4": "Yakın bölgelerde hızlı araç yönlendirme"
   },
   "testimonials": {
     "badge": "Gerçek Deneyimler",

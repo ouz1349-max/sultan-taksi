@@ -14,10 +14,10 @@ const ContactFooter = () => {
       <div className="absolute -top-16 right-0 h-80 w-80 rounded-full bg-gold/10 blur-3xl" />
 
       <div className="container relative z-10 mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 border-b border-gold/10 pb-14 lg:grid-cols-[1.25fr_0.95fr_0.8fr] lg:gap-16">
+        <div className="grid gap-14 rounded-[2rem] border border-gold/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.025),rgba(255,255,255,0.01))] px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1.15fr_0.9fr_0.75fr] lg:gap-12">
           <div>
             <p className="section-kicker mb-4">{t('common.brand')}</p>
-            <h2 className="max-w-md font-display text-4xl font-bold leading-tight tracking-[-0.04em] text-white md:text-[3.1rem]">
+            <h2 className="max-w-md font-display text-[2.5rem] font-bold leading-[0.98] tracking-[-0.05em] text-white md:text-[3.7rem]">
               {t('common.brand')}
             </h2>
             <p className="mt-5 max-w-md text-base leading-8 text-text/70 md:text-lg">
@@ -25,29 +25,27 @@ const ContactFooter = () => {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
+                href={`tel:${t('common.phone').replace(/\s/g, '')}`}
+                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-gold-light"
+              >
+                <Phone size={16} />
+                {t('hero.ctaCall')}
+              </a>
+              <a
                 href="https://maps.google.com/?q=Kenan%20Evren%20Sultan%20Taksi%20Adana"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[46px] items-center gap-2 rounded-full border border-gold/24 px-4 py-2 text-sm font-semibold text-gold transition-all hover:bg-gold hover:text-black"
+                className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-gold/22 px-5 py-3 text-sm font-semibold text-gold transition-all hover:bg-gold hover:text-black"
               >
                 <MapPin size={16} />
                 Google Maps
               </a>
-              <a
-                href="https://wa.me/905302227795"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[46px] items-center gap-2 rounded-full border border-gold/24 px-4 py-2 text-sm font-semibold text-gold transition-all hover:bg-gold hover:text-black"
-              >
-                <MessageCircle size={16} />
-                WhatsApp
-              </a>
             </div>
           </div>
 
-          <div>
+          <div className="border-t border-gold/10 pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('hero.ctaCall')}</p>
-            <div className="space-y-5 border-t border-gold/10 pt-5">
+            <div className="space-y-5">
               <a href={`tel:${t('common.phone').replace(/\s/g, '')}`} className="flex items-center gap-3 text-white transition-colors hover:text-gold">
                 <Phone size={18} className="text-gold" />
                 <span className="text-2xl font-bold tracking-[-0.03em]">{t('common.phone')}</span>
@@ -60,7 +58,7 @@ const ContactFooter = () => {
                 href="https://wa.me/905302227795"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-text/80 transition-colors hover:text-gold"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-text/82 transition-colors hover:text-gold"
               >
                 <MessageCircle size={16} className="text-gold" />
                 {t('hero.ctaWhatsapp')}
@@ -69,10 +67,10 @@ const ContactFooter = () => {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid gap-8 border-t border-gold/10 pt-6 sm:grid-cols-2 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('footer.languageTitle')}</p>
-              <div className="space-y-3 border-t border-gold/10 pt-5">
+              <div className="space-y-3">
                 <Link
                   href={pathname}
                   locale="tr"
@@ -94,14 +92,14 @@ const ContactFooter = () => {
 
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('footer.legalTitle')}</p>
-              <div className="space-y-3 border-t border-gold/10 pt-5">
-                <Link href="/duyurular" locale={locale} className="text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+              <div className="space-y-3">
+                <Link href="/duyurular" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
                   {t('footer.announcements')}
                 </Link>
-                <Link href="/kvkk" locale={locale} className="text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+                <Link href="/kvkk" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
                   {t('footer.kvkk')}
                 </Link>
-                <Link href="/cerez-politikasi" locale={locale} className="text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+                <Link href="/cerez-politikasi" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
                   {t('footer.cookies')}
                 </Link>
               </div>
@@ -118,4 +116,3 @@ const ContactFooter = () => {
 };
 
 export default ContactFooter;
-

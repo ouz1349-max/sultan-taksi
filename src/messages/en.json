@@ -42,7 +42,11 @@
     "googleScore": "4.9 Google Rating",
     "reviews": "22+ Verified Passenger Reviews",
     "service": "24/7 Uninterrupted Service",
-    "coverage": "2 km Around the Station"
+    "coverage": "2 km Around the Station",
+    "d1": "Consistent satisfaction across Google reviews",
+    "d2": "Verified passenger feedback",
+    "d3": "Open communication line all day",
+    "d4": "Fast dispatch in nearby neighborhoods"
   },
   "testimonials": {
     "badge": "Verified Experiences",
