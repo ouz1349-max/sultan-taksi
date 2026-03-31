@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
@@ -8,10 +9,18 @@ import { Phone, MessageSquare, ShieldCheck, Clock3, Star } from 'lucide-react';
 const Hero = () => {
   const t = useTranslations('hero');
   const locale = useLocale();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.5;
+    }
+  }, []);
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-primary">
       <video
+        ref={videoRef}
         className="absolute inset-0 z-0 h-full w-full object-cover object-[58%_center] scale-100 md:scale-105 max-md:object-[72%_52%]"
         autoPlay
         muted
@@ -115,3 +124,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
