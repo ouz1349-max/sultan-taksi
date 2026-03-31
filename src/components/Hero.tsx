@@ -11,20 +11,25 @@ const Hero = () => {
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-primary">
-      <div
-        className="hero-bg-image absolute inset-0 z-0 bg-no-repeat scale-100 md:scale-105"
-        style={{
-          backgroundImage: 'linear-gradient(115deg, rgba(4,7,12,0.78) 10%, rgba(6,9,15,0.46) 48%, rgba(4,7,12,0.8) 100%), url("/images/hero.webp")'
-        }}
-      />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#04060b80] via-[#05070c5a] to-[#090b1099]" />
+      <video
+        className="absolute inset-0 z-0 h-full w-full object-cover object-[58%_center] scale-100 md:scale-105 max-md:object-[72%_52%]"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/images/hero.webp"
+        aria-hidden="true"
+      >
+        <source src="/videos/sultanvideo.mp4?v=20260331-025729" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#04060bc2] via-[#05070c70] to-[#090b1099]" />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_36%,rgba(3,5,9,0.04),rgba(3,5,9,0.32)_56%,rgba(3,5,9,0.56)_100%)]" />
 
       <div className="absolute -left-8 -top-14 h-72 w-72 rounded-full bg-gold/25 blur-3xl" />
       <div className="absolute -right-14 top-24 h-72 w-72 rounded-full bg-sky-500/14 blur-3xl" />
-      <div className="absolute bottom-16 left-[12%] h-36 w-36 rounded-full border border-gold/18" />
 
-      <div className="container relative z-10 mx-auto px-6 pt-24 md:pt-16">
+      <div className="container relative z-10 mx-auto -mt-10 px-6 pt-24 md:-mt-14 md:pt-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
