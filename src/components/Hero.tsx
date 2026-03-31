@@ -13,7 +13,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 1.5;
+      videoRef.current.playbackRate = 1.2;
     }
   }, []);
 
@@ -26,8 +26,7 @@ const Hero = () => {
         muted
         loop
         playsInline
-        preload="metadata"
-        poster="/images/hero.webp"
+        preload="auto"
         aria-hidden="true"
       >
         <source src="/videos/sultanvideo.mp4?v=20260331-025729" type="video/mp4" />
@@ -124,4 +123,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
 

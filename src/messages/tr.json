@@ -25,18 +25,43 @@
   },
   "announcementTeaser": {
     "kicker": "Son Duyuru",
-    "title": "Hizmet alanı ve ulaşım bilgilendirmeleri tek yerde",
+    "title": "Hizmet alanı ve ulaşım bilgilendirmeleri",
     "description": "Kenan Evren Sultan Taksi ile ilgili en güncel hizmet alanı, ulaşılabilirlik ve operasyon notlarını duyurular sayfasında topluyoruz.",
     "date": "31 Mart 2026",
     "cta": "Duyuruları İncele"
   },
   "features": {
-    "title": "Neden Kenan Evren Sultan Taksi?",
-    "lead": "Kenan Evren çevresindeki yaklaşık 2 km hizmet alanında hızlı erişim, güvenli sürüş ve deneyimli sürücü kadrosu.",
-    "f1": { "title": "7/24 Hizmet", "desc": "Günün her saati emrinizdeyiz." },
-    "f2": { "title": "Güvenli ve Sigortalı", "desc": "Lisanslı ve sigortalı araçlarla güvenli yolculuk." },
-    "f3": { "title": "Yaklaşık 2 km Hizmet Alanı", "desc": "Durak çevresindeki yakın bölgelerde hızlı araç yönlendirme." },
-    "f4": { "title": "Deneyimli Sürücüler", "desc": "Şehri en iyi bilen kaptanlar." }
+    "titleLines": ["Neden", "Kenan Evren", "Sultan Taksi?"],
+    "lead": "Yaklaşık 2 km hizmet alanında, net iletişim ve güvenli sürüş standardıyla çalışan bir durak arıyorsanız; bu sayfada sizi gerçekten ilgilendiren temel farkları kısa ve açık şekilde görebilirsiniz.",
+    "supportPoints": [
+      "Önceliğimiz, yakın bölgelerde hızlı araç yönlendirme ve bekleme süresini minimumda tutmaktır.",
+      "Sürücü kalitesi, araç temizliği ve güvenli sürüş yaklaşımı hizmet standardımızın merkezindedir.",
+      "Telefon ve WhatsApp hattımız günün her saatinde aktiftir; uygunluk durumunu net şekilde paylaşırız."
+    ],
+    "f1": {
+      "eyebrow": "Erişim",
+      "title": "7/24 Ulaşılabilir Hizmet",
+      "desc": "Günün her saatinde telefon ve WhatsApp üzerinden ulaşılabilir kalıyor, özellikle yakın bölgelerden gelen çağrılara hızlı dönüş yapıyoruz.",
+      "detail": "Gece geç saatlerde de iletişim hattı açıktır; müsaitlik durumuna göre araç yönlendirme bilgisi net biçimde paylaşılır."
+    },
+    "f2": {
+      "eyebrow": "Güven",
+      "title": "Güvenli ve Düzenli Yolculuk",
+      "desc": "Lisanslı sürücüler, düzenli araç bakımı ve temiz iç mekân standardı ile daha huzurlu bir ulaşım deneyimi sunuyoruz.",
+      "detail": "Kısa mesafe dahi olsa sürüş güvenliği ve araç düzeni bizim için hizmet kalitesinin temel parçasıdır."
+    },
+    "f3": {
+      "eyebrow": "Hizmet Alanı",
+      "title": "Yaklaşık 2 km İçinde Hızlı Yönlendirme",
+      "desc": "Kenan Evren çevresindeki yaklaşık 2 km alanda daha hızlı araç yönlendirme yapabiliyor, talep geldiğinde bekleme süresini daha kontrollü yönetiyoruz.",
+      "detail": "Bu alan dışındaki çağrılar için de durum değerlendirmesi yapılır; uygunluk varsa bilgi verilerek destek olunur."
+    },
+    "f4": {
+      "eyebrow": "Deneyim",
+      "title": "Bölgeyi İyi Bilen Sürücüler",
+      "desc": "Yolcu iletişiminde sakin, sürüşte kontrollü ve bölge hakimiyeti yüksek kaptanlarla çalışıyoruz.",
+      "detail": "Özellikle yakın mahalleler, bağlantı yolları ve yoğun saatlerde en pratik güzergâh bilgisi büyük fark yaratır."
+    }
   },
   "stats": {
     "googleScore": "4.9 Google Puanı",
@@ -91,3 +116,5 @@
     "langEn": "ENGLISH"
   }
 }
+
+

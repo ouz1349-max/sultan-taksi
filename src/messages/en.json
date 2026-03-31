@@ -25,18 +25,43 @@
   },
   "announcementTeaser": {
     "kicker": "Latest Update",
-    "title": "Service area and access notes in one clear place",
+    "title": "Service area and access notes",
     "description": "We keep the latest service area details, availability notes, and operating updates for Kenan Evren Sultan Taxi on the announcements page.",
     "date": "March 31, 2026",
     "cta": "View Announcements"
   },
   "features": {
-    "title": "Why Kenan Evren Sultan Taxi?",
-    "lead": "Fast response, safe driving, and experienced local drivers within an approximate 2 km service zone around the station.",
-    "f1": { "title": "24/7 Service", "desc": "At your service any time of day." },
-    "f2": { "title": "Safe and Insured", "desc": "Ride with licensed and insured drivers." },
-    "f3": { "title": "Approx. 2 km Service Zone", "desc": "Fast pickup in neighborhoods close to the station." },
-    "f4": { "title": "Experienced Drivers", "desc": "Local drivers who know the city well." }
+    "titleLines": ["Why", "Kenan Evren", "Sultan Taxi?"],
+    "lead": "If you are looking for a taxi station that works with a clear service boundary, direct communication, and a calm driving standard, this section explains the difference in a more useful way.",
+    "supportPoints": [
+      "Our focus is fast dispatch within the nearby service zone and realistic communication about availability.",
+      "Driver quality, vehicle cleanliness, and safe driving are central parts of our service standard.",
+      "Our phone and WhatsApp lines stay active throughout the day, with clear updates on whether a car can be sent."
+    ],
+    "f1": {
+      "eyebrow": "Access",
+      "title": "24/7 Reachable Service",
+      "desc": "We stay reachable by phone and WhatsApp throughout the day and respond quickly to requests coming from nearby areas.",
+      "detail": "Even at late hours, the line remains open and availability is shared clearly before dispatch."
+    },
+    "f2": {
+      "eyebrow": "Trust",
+      "title": "Safe and Well-Kept Rides",
+      "desc": "Licensed drivers, regular vehicle maintenance, and a clean cabin standard create a more reassuring travel experience.",
+      "detail": "Even for short rides, controlled driving and vehicle order are treated as core parts of quality."
+    },
+    "f3": {
+      "eyebrow": "Coverage",
+      "title": "Fast Dispatch Within Approx. 2 km",
+      "desc": "Within the approximate 2 km area around Kenan Evren, we can dispatch more quickly and manage waiting time more predictably.",
+      "detail": "Requests from farther points are still reviewed case by case, with clear feedback whenever support is possible."
+    },
+    "f4": {
+      "eyebrow": "Experience",
+      "title": "Drivers Who Know the Area Well",
+      "desc": "We work with drivers who stay calm in communication, drive carefully, and know the surrounding neighborhoods well.",
+      "detail": "That local familiarity matters most in nearby streets, connector roads, and busy times of day."
+    }
   },
   "stats": {
     "googleScore": "4.9 Google Rating",
@@ -91,3 +116,5 @@
     "langEn": "ENGLISH"
   }
 }
+
+
