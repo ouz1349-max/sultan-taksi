@@ -53,9 +53,9 @@ const Hero = () => {
             {t('badge')}
           </motion.p>
 
-          <h1 className="mb-7 font-black leading-[0.9] tracking-[-0.06em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-            <span className="block text-[3.55rem] md:text-[6.4rem] lg:text-[7rem]">{t('title1')}</span>
-            <span className={`block text-[4.15rem] md:text-[7.4rem] lg:text-[8.2rem] ${locale === 'tr' ? 'text-gold' : 'text-gold-gradient'} -mt-1 md:-mt-2`}>
+          <h1 className="mb-7 font-black leading-[0.9] tracking-[-0.045em] text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+            <span className="block text-[2.75rem] md:text-[5.2rem] lg:text-[5.9rem]">{t('title1')}</span>
+            <span className={`block text-[3.05rem] md:text-[5.9rem] lg:text-[6.6rem] ${locale === 'tr' ? 'text-gold' : 'text-gold-gradient'} -mt-1 md:-mt-2`}>
               {t('title2')}
             </span>
           </h1>
@@ -123,5 +123,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
