@@ -220,3 +220,68 @@ Yapılan deploy adımları:
 
 ---
 Son güncelleme: 26 Mart 2026
+
+## 16) 8 Nisan 2026 Sprint Güncellemeleri
+### 16.1 Yeni Site Mimarisi
+- Tek sayfalık yapıdan küçük ama daha olgun site mimarisine geçiş başladı.
+- Yeni sayfalar açıldı:
+  - `Galeri`
+  - `Hakkımızda`
+  - mevcut `Duyurular` sayfası yeniden yapılandırıldı
+- Header ve footer bu yeni sayfa mimarisine göre genişletildi.
+
+### 16.2 Galeri Sayfası
+- Gerçek görseller projeye alındı ve `public/images/gallery` altında düzenlendi.
+- Klasik galeri yerine daha premium vitrin mantığında bir galeri sayfası kuruldu.
+- Lightbox / büyütme davranışı eklendi.
+- İlk görselin büyütülmesinde yaşanan sorun için birkaç tur hata giderme yapıldı; son durumda kullanıcı geri bildirimiyle sorun ortadan kalktı.
+- Galeri metinleri TR/EN olarak güncellenmeye başlandı; son cila turu açık bırakıldı.
+
+### 16.3 Duyurular Sayfası
+- Duyurular sayfası basit metin ekranından kısa rehber mantığına taşındı.
+- İçerik yapısı:
+  - güncel bilgilendirme
+  - kısa rehber kartları
+  - SSS
+  - galeri ve çağrı aksiyonları
+- Renk tonu ana siteyle hizalandı.
+- İç linkleme görünür hale getirildi:
+  - `Ana Sayfa`
+  - `Hakkımızda`
+  - `Galeri`
+
+### 16.4 Hakkımızda Sayfası
+- Yeni `Hakkımızda` sayfası eklendi.
+- Amaç:
+  - yerel güven sinyali
+  - marka anlatısı
+  - hizmet alanı ve çalışma biçimini daha net vermek
+
+### 16.5 SEO / Paylaşım Katmanı
+- Ana sayfa, galeri, duyurular ve hakkında sayfaları için metadata / Open Graph alanları geliştirildi.
+- Ana sayfada `LocalBusiness` ve `FAQPage` schema kullanımı korundu.
+- Duyurular sayfasına `FAQPage` schema eklendi.
+
+### 16.6 Dokümantasyon ve Hafıza
+- AnkaVet projesinden alınan derslerle yeni hafıza omurgası oluşturuldu:
+  - `sultan_index.md`
+  - `project_memory.md`
+  - `i18n_guidelines.md`
+  - `content_checklist.md`
+- Yerel geliştirme için `start-local.cmd` eklendi.
+
+### 16.7 Sprint Durumu
+Tamamlananlar:
+- Yeni bilgi mimarisi
+- Yeni sayfalar
+- Galeri temel kurulum
+- Duyuruların rehber yapısına geçmesi
+- İç linkleme ve metadata güçlendirmesi
+
+Açık kalanlar:
+- Galeri son cila
+- Yeni sayfalar arası görsel tutarlılık
+- Sprint kapanışı için toplu commit / push / deploy
+
+---
+Son güncelleme: 8 Nisan 2026

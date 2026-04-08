@@ -7,6 +7,9 @@
     "address": "Reşatbey, 01119 Çukurova/Adana"
   },
   "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
     "announcements": "Announcements"
   },
   "hero": {
@@ -28,7 +31,8 @@
     "title": "Service area and access notes",
     "description": "We keep the latest service area details, availability notes, and operating updates for Kenan Evren Sultan Taxi on the announcements page.",
     "date": "March 31, 2026",
-    "cta": "View Announcements"
+    "cta": "View Announcements",
+    "secondaryCta": "View Gallery"
   },
   "features": {
     "titleLines": ["Why", "Kenan Evren", "Sultan Taxi?"],
@@ -109,13 +113,45 @@
     "description": "Kenan Evren Sultan Taxi provides reliable 24/7 service within an approximate 2 km service zone.",
     "languageTitle": "Language",
     "legalTitle": "Legal",
+    "pagesTitle": "Pages",
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
     "announcements": "Announcements",
     "kvkk": "Privacy Notice (KVKK)",
     "cookies": "Cookie Policy",
     "langTr": "TÜRKÇE",
     "langEn": "ENGLISH"
+  },
+  "aboutPage": {
+    "kicker": "Who We Are",
+    "title": "A clearer look at Kenan Evren Sultan Taxi",
+    "intro": "Kenan Evren Sultan Taxi is a local taxi station in Adana focused on fast dispatch, clean vehicles, and direct communication within an approximate 2 km service area around the station.",
+    "p1Title": "How we operate",
+    "p1Text": "Our priority is dispatching quickly in nearby areas and giving clear updates about availability. Phone and WhatsApp lines stay active throughout the day.",
+    "p2Title": "What matters to us",
+    "p2Text": "Passenger safety, vehicle cleanliness, and calm driving standards are not extras for us. Even on short rides, we aim to keep the experience orderly and respectful.",
+    "p3Title": "Service area",
+    "p3Text": "Our standard service area is the approximate 2 km zone around Kenan Evren. Requests from farther points are reviewed based on real-time availability.",
+    "factsLabel": "Quick Notes",
+    "fact1": "24/7 phone and WhatsApp access",
+    "fact2": "Approximate 8-12 minute dispatch target",
+    "fact3": "Approximate 2 km core service area",
+    "cta": "Call Now"
+  },
+  "galleryPage": {
+    "kicker": "Gallery",
+    "title": "A closer look at the car, the area, and the ride experience",
+    "intro": "We brought together exterior, interior, and surrounding-area images on this page to help you get to know Kenan Evren Sultan Taxi better.",
+    "heroLabel": "Featured vehicle view",
+    "heroCaption": "The main frame that combines the car, its identity, and how clearly it stands out in the area.",
+    "sequenceTitle": "Exterior views",
+    "sequenceIntro": "Selected exterior frames moving from tighter angles to more open street views.",
+    "interiorTitle": "Interior view",
+    "interiorIntro": "Selected interior frames that show the cabin layout and ride atmosphere.",
+    "interiorBadge": "Interior",
+    "finalTitle": "Wider area shots",
+    "finalIntro": "More distant frames that show how the taxi appears within its surrounding area.",
+    "cta": "Call Now"
   }
 }
-
-
-

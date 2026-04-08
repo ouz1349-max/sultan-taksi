@@ -56,3 +56,41 @@ This file stores chronological implementation notes that are more detailed than 
 - `3fa287c` Add FAQ block inside announcements page
 - `8938d8a` Add announcements page, top nav link, and bilingual FAQ refresh
 - `e9243fa` Align service area to 2km and strengthen Kenan Evren branding
+
+## 2026-04-08
+
+- Sprint-based restructuring started with AnkaVet-inspired documentation discipline.
+- New memory / standards files added:
+  - `sultan_index.md`
+  - `project_memory.md`
+  - `i18n_guidelines.md`
+  - `content_checklist.md`
+- Local dev launcher added:
+  - `start-local.cmd`
+- New routes introduced:
+  - `src/app/[locale]/galeri/page.tsx`
+  - `src/app/[locale]/hakkimizda/page.tsx`
+- `src/app/[locale]/duyurular/page.tsx` reworked from a simple announcement note into a short-guide structure.
+- Header / footer navigation extended to carry the new multi-page architecture.
+- Page-level metadata and Open Graph layers expanded for:
+  - homepage
+  - gallery
+  - about
+  - announcements
+- FAQ schema added to announcements page.
+- Gallery implementation added with local media set under:
+  - `public/images/gallery/*`
+- Gallery interaction bug around the first image was iteratively debugged and later confirmed resolved by user feedback.
+- Mobile action bar limited to homepage only to avoid overlaying inner pages.
+- Internal linking strengthened:
+  - homepage teaser now points to announcements and gallery
+  - announcements page points to gallery, about, home, and direct call
+
+## Current sprint status
+
+- Core restructuring: in place
+- Gallery: functional, needs final copy/composition polish
+- Announcements: structurally upgraded
+- About page: in place
+- SEO / sharing layer: stronger than previous state
+- Final pending step: sprint wrap-up, memory sync, commit/push/deploy

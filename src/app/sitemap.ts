@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sultan-taksi.vercel.app';
   const locales = ['tr', 'en'] as const;
-  const localizedPaths = ['', '/duyurular', '/kvkk', '/cerez-politikasi'];
+  const localizedPaths = ['', '/galeri', '/hakkimizda', '/duyurular', '/kvkk', '/cerez-politikasi'];
 
   return locales.flatMap((locale) =>
     localizedPaths.map((path) => ({

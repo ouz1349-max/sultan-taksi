@@ -27,14 +27,24 @@ const AnnouncementTeaser = () => {
               <div className="rounded-full border border-gold/20 bg-white/[0.03] px-3 py-1 text-[0.72rem] uppercase tracking-[0.24em] text-gold/80">
                 {t("date")}
               </div>
-              <Link
-                href="/duyurular"
-                locale={locale}
-                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition-all duration-300 hover:bg-gold-light"
-              >
-                {t("cta")}
-                <ArrowUpRight size={16} />
-              </Link>
+              <div className="flex flex-wrap gap-3 md:justify-end">
+                <Link
+                  href="/duyurular"
+                  locale={locale}
+                  className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition-all duration-300 hover:bg-gold-light"
+                >
+                  {t("cta")}
+                  <ArrowUpRight size={16} />
+                </Link>
+                <Link
+                  href="/galeri"
+                  locale={locale}
+                  className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-gold/20 px-5 py-3 text-sm font-semibold text-gold transition-all duration-300 hover:bg-gold hover:text-black"
+                >
+                  {t("secondaryCta")}
+                  <ArrowUpRight size={16} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

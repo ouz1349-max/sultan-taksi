@@ -45,7 +45,7 @@ const Hero = () => {
           className="mx-auto max-w-[62rem] text-center"
         >
           <motion.p
-            className="section-kicker mb-8"
+            className="section-kicker mt-4 mb-8 md:mt-6"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.12, duration: 0.5 }}

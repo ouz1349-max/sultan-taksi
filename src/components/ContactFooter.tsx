@@ -91,11 +91,26 @@ const ContactFooter = () => {
             </div>
 
             <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('footer.legalTitle')}</p>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('footer.pagesTitle')}</p>
               <div className="space-y-3">
+                <Link href="/" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+                  {t('footer.home')}
+                </Link>
+                <Link href="/galeri" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+                  {t('footer.gallery')}
+                </Link>
+                <Link href="/hakkimizda" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
+                  {t('footer.about')}
+                </Link>
                 <Link href="/duyurular" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
                   {t('footer.announcements')}
                 </Link>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('footer.legalTitle')}</p>
+              <div className="space-y-3">
                 <Link href="/kvkk" locale={locale} className="block text-sm font-semibold text-text/70 transition-colors hover:text-gold">
                   {t('footer.kvkk')}
                 </Link>
