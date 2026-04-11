@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ContactFooter from "./ContactFooter";
 
 type GalleryItem = {
   src: string;
@@ -339,6 +340,7 @@ export default function GalleryExperience({
           </motion.div>
         )}
       </AnimatePresence>
+      <ContactFooter />
     </main>
   );
 }
