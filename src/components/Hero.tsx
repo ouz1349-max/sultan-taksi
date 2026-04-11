@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
@@ -17,6 +17,12 @@ const Hero = () => {
     }
   }, []);
 
+  const handleVideoPlay = () => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.2;
+    }
+  };
+
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-primary">
       <video
@@ -28,6 +34,7 @@ const Hero = () => {
         playsInline
         preload="auto"
         aria-hidden="true"
+        onPlay={handleVideoPlay}
       >
         <source src="/videos/sultanvideo.mp4?v=20260331-025729" type="video/mp4" />
       </video>
@@ -123,6 +130,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
