@@ -2,7 +2,9 @@
 
 Adana merkezli taksi hizmeti için hazırlanmış, dönüşüm odaklı ve çift dilli (TR/EN) bir Next.js web sitesi.
 
-Canlı adres: [https://sultan-taksi.vercel.app](https://sultan-taksi.vercel.app)
+Canlı alias: [https://sultan-taksi.vercel.app](https://sultan-taksi.vercel.app)
+
+Not: canonical / metadata / robots / sitemap için production host fallback olarak bu alias kullanılmaz. Deploy öncesi `NEXT_PUBLIC_SITE_URL` veya `SITE_URL` ayarlanmalıdır; aksi halde SEO host zinciri güvenli fallback olarak `https://example.invalid` üretir.
 
 ## Proje Özeti
 
@@ -58,6 +60,14 @@ npm run start
 ```
 
 ## Deploy (Vercel)
+
+Production deploy öncesi zorunlu ortam değişkeni:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://gercek-production-domain.example
+```
+
+Alternatif olarak `SITE_URL` da kullanılabilir. Bu değer verilmezse canonical, robots ve sitemap doğru production host üretmez.
 
 ```bash
 npx vercel --prod --yes

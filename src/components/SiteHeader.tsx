@@ -3,11 +3,20 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { MessageCircle } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const SiteHeader = () => {
   const common = useTranslations('common');
   const nav = useTranslations('nav');
   const locale = useLocale();
+  const pathname = usePathname();
+
+  const navClass = (href: string) => {
+    const target = href === '/' ? `/${locale}` : `/${locale}${href}`;
+    const active = href === '/' ? pathname === target : pathname === target || pathname.startsWith(`${target}/`);
+
+    return `text-sm font-semibold transition-colors ${active ? 'text-gold' : 'text-text/78 hover:text-gold'}`;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
@@ -19,16 +28,19 @@ const SiteHeader = () => {
             </Link>
 
             <nav className="hidden items-center gap-5 md:flex">
-              <Link href="/" locale={locale} className="text-sm font-semibold text-text/78 transition-colors hover:text-gold">
+              <Link href="/" locale={locale} className={navClass('/')}>
                 {nav('home')}
               </Link>
-              <Link href="/galeri" locale={locale} className="text-sm font-semibold text-text/78 transition-colors hover:text-gold">
+              <Link href="/galeri" locale={locale} className={navClass('/galeri')}>
                 {nav('gallery')}
               </Link>
-              <Link href="/hakkimizda" locale={locale} className="text-sm font-semibold text-text/78 transition-colors hover:text-gold">
+              <Link href="/rehberler" locale={locale} className={navClass('/rehberler')}>
+                {nav('guides')}
+              </Link>
+              <Link href="/hakkimizda" locale={locale} className={navClass('/hakkimizda')}>
                 {nav('about')}
               </Link>
-              <Link href="/duyurular" locale={locale} className="text-sm font-semibold text-text/78 transition-colors hover:text-gold">
+              <Link href="/duyurular" locale={locale} className={navClass('/duyurular')}>
                 {nav('announcements')}
               </Link>
             </nav>
@@ -52,4 +64,3 @@ const SiteHeader = () => {
 };
 
 export default SiteHeader;
-

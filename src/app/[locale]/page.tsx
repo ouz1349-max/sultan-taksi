@@ -8,6 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import MapSection from '@/components/MapSection';
 import ContactFooter from '@/components/ContactFooter';
+import { getSiteUrl } from '@/lib/site-url';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -60,14 +61,15 @@ export default async function IndexPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const faq = await getTranslations({ locale, namespace: 'faq' });
+  const siteUrl = getSiteUrl();
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Kenan Evren Sultan Taksi',
-    image: 'https://sultan-taksi.vercel.app/images/hero.webp',
-    '@id': 'https://sultan-taksi.vercel.app',
-    url: 'https://sultan-taksi.vercel.app',
+    image: `${siteUrl}/images/hero.webp`,
+    '@id': siteUrl,
+    url: siteUrl,
     telephone: '+905302227795',
     priceRange: '₺₺',
     address: {

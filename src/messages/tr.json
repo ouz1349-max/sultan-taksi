@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "brand": "Kenan Evren Sultan Taksi",
     "fullName": "Kenan Evren Sultan Taksi",
@@ -9,6 +9,7 @@
   "nav": {
     "home": "Ana Sayfa",
     "gallery": "Galeri",
+    "guides": "Rehberler",
     "about": "Hakkımızda",
     "announcements": "Duyurular"
   },
@@ -116,6 +117,7 @@
     "pagesTitle": "Sayfalar",
     "home": "Ana Sayfa",
     "gallery": "Galeri",
+    "guides": "Rehberler",
     "about": "Hakkımızda",
     "announcements": "Duyurular",
     "kvkk": "KVKK Aydınlatma Metni",
@@ -124,34 +126,35 @@
     "langEn": "ENGLISH"
   },
   "aboutPage": {
-    "kicker": "Biz Kimiz",
-    "title": "Kenan Evren Sultan Taksi hakkında kısa ve net bilgiler",
-    "intro": "Kenan Evren Sultan Taksi, Adana'da durak çevresindeki yaklaşık 2 km hizmet alanında hızlı ulaşım, temiz araç ve net iletişim odaklı çalışan yerel bir taksi durağıdır.",
-    "p1Title": "Nasıl çalışıyoruz",
-    "p1Text": "Önceliğimiz, yakın bölgelerde mümkün olan en kısa sürede araç yönlendirmek ve müsaitlik durumunu açık biçimde paylaşmaktır. Telefon ve WhatsApp hattı gün boyu aktif tutulur.",
-    "p2Title": "Bizim için önemli olan",
-    "p2Text": "Yolcu güvenliği, araç temizliği ve sürüş düzeni bu işin temelidir. Kısa mesafede de uzun bekleme olmadan, sakin ve saygılı bir hizmet deneyimi sunmaya çalışıyoruz.",
-    "p3Title": "Hizmet alanı",
-    "p3Text": "Standart hizmet alanımız Kenan Evren çevresindeki yaklaşık 2 km bölgedir. Daha uzak taleplerde durum uygunluğa göre değerlendirilir ve net bilgi verilir.",
-    "factsLabel": "Kısa Notlar",
-    "fact1": "7/24 telefon ve WhatsApp erişimi",
-    "fact2": "Yaklaşık 8-12 dakika yönlendirme hedefi",
-    "fact3": "Yaklaşık 2 km ana hizmet alanı",
-    "cta": "Hemen Ara"
+    "kicker": "Kurumsal",
+    "title": "Adana'da yenilikçi ve konforlu ulaşım yaklaşımı",
+    "intro": "Kenan Evren Sultan Taksi olarak, sadece bir noktadan diğerine gitmeyi değil, tüm seyahat deneyimini daha güvenli, şeffaf ve nezih bir formata dönüştürüyoruz.",
+    "p1Title": "Hizmet Anlayışımız",
+    "p1Text": "Kesintisiz ve kaliteli ulaşım, her şeyden önce profesyonellik gerektirir. Sürücü ağımızı ve araç standartlarımızı bu bilinçle şekillendiriyoruz.",
+    "p2Title": "Güven ve Prestij",
+    "p2Text": "Araç içi düzen, bakım standartları ve saygılı iletişim; yolcularımızın bizden beklediği tartışılmaz kriterlerdir. Kısa mesafelerde dahi standart üstü bir deneyim sunmayı amaçlıyoruz.",
+    "p3Title": "7/24 Kesintisizlik",
+    "p3Text": "Saat kaç olursa olsun, bir çağrı merkeziniz varmış gibi telefon ve WhatsApp hatlarımız üzerinden bize anında ulaşabilirsiniz.",
+    "factsLabel": "Hizmet Standartları",
+    "fact1": "Deneyimli ve referanslı sürücü kadrosu",
+    "fact2": "Düzenli bakımı yapılan hijyenik araçlar",
+    "fact3": "Açık iletişim ve tahmini varış süresi bilgilendirmesi",
+    "fact4": "Kısa veya uzun mesafe ayrımı yapmaksızın aynı yüksek özen",
+    "cta": "Rezervasyon Yap / Ara"
   },
   "galleryPage": {
     "kicker": "Galeri",
     "title": "Araç, çevre ve yolculuk deneyimini daha yakından görün",
-    "intro": "Kenan Evren Sultan Taksi'yi sizlere daha yakından tanıtmak için araç dışı, araç içi ve çevre karelerini bu sayfada bir araya getirdik.",
+    "intro": "Kenan Evren Sultan Taksi'yi sizlere daha yakından tanıtmak için araç dışı, araç içi ve hizmet verdiği çevreye ait kareleri bu sayfada bir araya getirdik.",
     "heroLabel": "Öne çıkan araç görünümü",
     "heroCaption": "Dış görünüm, araç kimliği ve bulunduğu çevredeki görünürlüğü bir arada gösteren ana kare.",
     "sequenceTitle": "Araç dışı görünümler",
-    "sequenceIntro": "Yakın planlardan daha açık sokak karelerine doğru ilerleyen dış çekimler.",
+    "sequenceIntro": "Kenan Evren çevresinde hizmet veren taksi aracının dış görünümünü, yakın planlardan daha açık sokak karelerine doğru gösteren seçilmiş fotoğraflar.",
     "interiorTitle": "Araç içi görünüm",
-    "interiorIntro": "Kabin düzenini ve yolculuk hissini gösteren seçilmiş iç mekân kareleri.",
+    "interiorIntro": "Araç içi düzeni, kabin temizliği ve yolculuk konforunu daha net gösteren seçilmiş iç mekân kareleri.",
     "interiorBadge": "İç Mekân",
     "finalTitle": "Daha geniş çevre kareleri",
-    "finalIntro": "Aracın bulunduğu çevrede nasıl göründüğünü gösteren daha uzak çekimler.",
+    "finalIntro": "Aracın hizmet verdiği çevrede nasıl göründüğünü ve bölge içinde ne kadar görünür olduğunu gösteren daha uzak çekimler.",
     "cta": "Hemen Ara"
   }
 }

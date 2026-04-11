@@ -27,46 +27,46 @@ type GalleryExperienceProps = {
   wideShots: GalleryItem[];
 };
 
-function GalleryImageCard({
+function GalleryFigure({
   item,
   onOpen,
-  aspectClass,
   priority = false,
 }: {
   item: GalleryItem;
   onOpen: () => void;
-  aspectClass: string;
   priority?: boolean;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="group block w-full text-left"
-      aria-label={item.alt}
-    >
-      <div className="relative overflow-hidden rounded-[1.35rem] border border-gold/10 bg-black/18">
-        <div className={`relative ${aspectClass}`}>
-          <Image
-            src={item.src}
-            alt={item.alt}
-            fill
-            unoptimized
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            sizes="(min-width: 1024px) 50vw, 100vw"
-            priority={priority}
-          />
+    <figure className="group flex flex-col h-full">
+      <button 
+        type="button" 
+        onClick={onOpen} 
+        className="block w-full text-left" 
+        aria-label={item.alt}
+      >
+        <div className="relative overflow-hidden rounded-[1.5rem] bg-white/5 shadow-sm transition-all duration-500 group-hover:shadow-[0_8px_30px_rgba(234,179,8,0.08)] ring-1 ring-white/5">
+          <div className="relative aspect-[4/3] w-full bg-[#0d1017]">
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              unoptimized
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority={priority}
+            />
+          </div>
+          <div className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:border-gold/50 group-hover:text-gold">
+            <Expand size={16} strokeWidth={2.5} />
+          </div>
         </div>
-        <div className="absolute right-3 top-3 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-black/50 text-white backdrop-blur-md transition-colors group-hover:border-gold/35 group-hover:text-gold">
-          <Expand size={17} />
-        </div>
-      </div>
-      {item.caption ? (
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-text/70">
+      </button>
+      {item.caption && (
+        <figcaption className="mt-5 text-[0.95rem] leading-7 text-text/70 px-2 flex-grow">
           {item.caption}
-        </p>
-      ) : null}
-    </button>
+        </figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -86,10 +86,7 @@ export default function GalleryExperience({
   finalIntro,
   wideShots,
 }: GalleryExperienceProps) {
-  const allImages = useMemo(
-    () => [...exteriorShots, ...interiorShots, ...wideShots],
-    [exteriorShots, interiorShots, wideShots]
-  );
+  const allImages = useMemo(() => [...exteriorShots, ...interiorShots, ...wideShots], [exteriorShots, interiorShots, wideShots]);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const activeImage = activeIndex === null ? null : allImages[activeIndex];
@@ -105,22 +102,12 @@ export default function GalleryExperience({
     document.body.style.overflow = "hidden";
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveIndex(null);
-      }
-
+      if (event.key === "Escape") setActiveIndex(null);
       if (event.key === "ArrowLeft" && canGoPrev) {
-        setActiveIndex((current) =>
-          current === null ? current : Math.max(current - 1, 0)
-        );
+        setActiveIndex((current) => (current === null ? current : Math.max(current - 1, 0)));
       }
-
       if (event.key === "ArrowRight" && canGoNext) {
-        setActiveIndex((current) =>
-          current === null
-            ? current
-            : Math.min(current + 1, allImages.length - 1)
-        );
+        setActiveIndex((current) => (current === null ? current : Math.min(current + 1, allImages.length - 1)));
       }
     };
 
@@ -144,153 +131,130 @@ export default function GalleryExperience({
   const wideStart = exteriorShots.length + interiorShots.length;
 
   return (
-    <main className="site-shell bg-bg-secondary pt-36 pb-24">
-      <section className="container mx-auto max-w-6xl px-6">
-        <div className="max-w-3xl">
-          <p className="section-kicker mb-4">{kicker}</p>
-          <h1 className="max-w-[11ch] font-display text-4xl font-bold leading-[0.96] tracking-[-0.05em] text-white md:text-[4.1rem]">
-            {title}
-          </h1>
-          <p className="mt-6 text-base leading-8 text-text/76 md:text-lg">
-            {intro}
-          </p>
-        </div>
+    <main className="site-shell bg-bg-secondary pt-32 pb-24">
+      {/* Header Section */}
+      <section className="container mx-auto max-w-6xl px-6 pb-20 text-center">
+        <p className="section-kicker mb-4 mx-auto">{kicker}</p>
+        <h1 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-white md:text-[4rem]">
+          {title}
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-text/76">{intro}</p>
       </section>
 
-      <section className="container mx-auto mt-18 max-w-6xl px-6">
-        <div className="mb-10 max-w-3xl">
-          <p className="section-kicker mb-4">{exteriorTitle}</p>
-          <p className="text-base leading-8 text-text/72 md:text-lg">
-            {exteriorIntro}
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {exteriorShots.map((item, index) => (
-            <article
-              key={item.src}
-              className="rounded-[1.8rem] border border-gold/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] p-4"
-            >
-              <GalleryImageCard
+      {/* Exterior Shots */}
+      {exteriorShots.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 pb-24">
+          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+            <p className="section-kicker mb-3 md:mx-0 mx-auto">{exteriorTitle}</p>
+            <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
+              Ortama Uyum Sağlayan Tasarım
+            </h2>
+            <p className="max-w-2xl text-base leading-8 text-text/74 mx-auto md:mx-0">
+              {exteriorIntro}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+            {exteriorShots.map((item, index) => (
+              <GalleryFigure
+                key={item.src}
                 item={item}
                 onOpen={() => setActiveIndex(index)}
-                aspectClass="aspect-[16/10]"
-                priority={index === 0}
+                priority={index < 2}
               />
-            </article>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
-      <section className="container mx-auto mt-20 max-w-6xl px-6">
-        <div className="mb-10 max-w-3xl">
-          <p className="section-kicker mb-4">{interiorBadge}</p>
-          <h2 className="font-display text-3xl font-bold leading-tight tracking-[-0.04em] text-white md:text-[3rem]">
-            {interiorTitle}
-          </h2>
-          <p className="mt-5 text-base leading-8 text-text/72 md:text-lg">
-            {interiorIntro}
-          </p>
-        </div>
-
-        <div className="grid gap-5">
-          {interiorShots.map((item, index) => (
-            <article
-              key={item.src}
-              className="rounded-[1.8rem] border border-gold/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] p-4"
-            >
-              <GalleryImageCard
+      {/* Interior Shots */}
+      {interiorShots.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 pb-24">
+          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+            <p className="section-kicker mb-3 md:mx-0 mx-auto">{interiorBadge}</p>
+            <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
+              {interiorTitle}
+            </h2>
+            <p className="max-w-2xl text-base leading-8 text-text/74 mx-auto md:mx-0">
+              {interiorIntro}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+            {interiorShots.map((item, index) => (
+              <GalleryFigure
+                key={item.src}
                 item={item}
                 onOpen={() => setActiveIndex(interiorStart + index)}
-                aspectClass="aspect-[16/10] md:aspect-[16/8]"
               />
-            </article>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
-      <section className="container mx-auto mt-20 max-w-6xl px-6">
-        <div className="mb-10 max-w-3xl">
-          <p className="section-kicker mb-4">{finalTitle}</p>
-          <p className="text-base leading-8 text-text/72 md:text-lg">
-            {finalIntro}
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {wideShots.map((item, index) => (
-            <article
-              key={item.src}
-              className="rounded-[1.8rem] border border-gold/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] p-4"
-            >
-              <GalleryImageCard
+      {/* Wide Shots */}
+      {wideShots.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 pb-12">
+          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+            <p className="section-kicker mb-3 md:mx-0 mx-auto">{finalTitle}</p>
+            <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
+              Her Noktada Görünürlük
+            </h2>
+            <p className="max-w-2xl text-base leading-8 text-text/74 mx-auto md:mx-0">
+              {finalIntro}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+            {wideShots.map((item, index) => (
+              <GalleryFigure
+                key={item.src}
                 item={item}
                 onOpen={() => setActiveIndex(wideStart + index)}
-                aspectClass="aspect-[16/10]"
               />
-            </article>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
+      {/* Fullscreen Overlay Modal */}
       {activeImage ? (
-        <div className="fixed inset-0 z-[120] bg-black/88 backdrop-blur-sm">
-          <button
-            type="button"
-            onClick={() => setActiveIndex(null)}
-            className="absolute inset-0 z-[120] h-full w-full"
-            aria-label={locale === "tr" ? "Görseli kapat" : "Close image"}
-          />
+        <div className="fixed inset-0 z-[120] bg-black/95 backdrop-blur-md">
+          <button type="button" onClick={() => setActiveIndex(null)} className="absolute inset-0 z-[120] h-full w-full" aria-label={locale === "tr" ? "Görseli kapat" : "Close image"} />
 
-          <div className="absolute inset-0 z-[121] flex items-center justify-center px-3 py-10 md:px-10 md:py-16">
+          <div className="absolute inset-0 z-[121] flex items-center justify-center px-4 py-8 md:px-12 md:py-12">
             <button
               type="button"
               onClick={() => step(-1)}
               disabled={!canGoPrev}
-              className="mr-2 hidden h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-white/14 bg-black/55 text-white transition-colors hover:border-gold/35 hover:text-gold disabled:cursor-not-allowed disabled:opacity-30 md:inline-flex"
+              className="mr-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex"
               aria-label={locale === "tr" ? "Önceki görsel" : "Previous image"}
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={24} />
             </button>
 
-            <div className="w-full max-w-6xl">
-              <div className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#0b0d13] shadow-[0_30px_90px_rgba(0,0,0,0.45)] md:rounded-[1.75rem]">
+            <div className="w-full max-w-5xl flex flex-col items-center">
+              <div className="relative w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#0b0d13] shadow-[0_30px_90px_rgba(0,0,0,0.65)] md:rounded-[1.75rem]">
                 <button
                   type="button"
                   onClick={() => setActiveIndex(null)}
-                  className="absolute right-2 top-2 z-[122] inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-black/55 text-white transition-colors hover:border-gold/35 hover:text-gold md:right-3 md:top-3 md:h-11 md:w-11"
+                  className="absolute right-3 top-3 z-[122] inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 md:right-4 md:top-4"
                   aria-label={locale === "tr" ? "Kapat" : "Close"}
                 >
-                  <X size={18} />
+                  <X size={20} />
                 </button>
                 <div className="relative aspect-[4/3] w-full md:aspect-[16/10]">
-                  <Image
-                    key={activeImage.src}
-                    src={activeImage.src}
-                    alt={activeImage.alt}
-                    fill
-                    unoptimized
-                    className="object-contain"
-                    sizes="100vw"
-                    priority
-                  />
+                  <Image key={activeImage.src} src={activeImage.src} alt={activeImage.alt} fill unoptimized className="object-contain" sizes="100vw" priority />
                 </div>
               </div>
-              {activeImage.caption ? (
-                <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-7 text-text/76 md:text-base">
-                  {activeImage.caption}
-                </p>
-              ) : null}
+              {activeImage.caption ? <p className="mt-6 max-w-3xl text-center text-[0.95rem] leading-7 text-white/80 md:text-base">{activeImage.caption}</p> : null}
             </div>
 
             <button
               type="button"
               onClick={() => step(1)}
               disabled={!canGoNext}
-              className="ml-2 hidden h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border border-white/14 bg-black/55 text-white transition-colors hover:border-gold/35 hover:text-gold disabled:cursor-not-allowed disabled:opacity-30 md:inline-flex"
+              className="ml-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex"
               aria-label={locale === "tr" ? "Sonraki görsel" : "Next image"}
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={24} />
             </button>
           </div>
         </div>

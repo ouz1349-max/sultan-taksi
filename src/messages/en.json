@@ -1,4 +1,4 @@
-﻿{
+{
   "common": {
     "brand": "Kenan Evren Sultan Taxi",
     "fullName": "Kenan Evren Sultan Taxi",
@@ -9,6 +9,7 @@
   "nav": {
     "home": "Home",
     "gallery": "Gallery",
+    "guides": "Guides",
     "about": "About",
     "announcements": "Announcements"
   },
@@ -116,6 +117,7 @@
     "pagesTitle": "Pages",
     "home": "Home",
     "gallery": "Gallery",
+    "guides": "Guides",
     "about": "About",
     "announcements": "Announcements",
     "kvkk": "Privacy Notice (KVKK)",
@@ -124,34 +126,35 @@
     "langEn": "ENGLISH"
   },
   "aboutPage": {
-    "kicker": "Who We Are",
-    "title": "A clearer look at Kenan Evren Sultan Taxi",
-    "intro": "Kenan Evren Sultan Taxi is a local taxi station in Adana focused on fast dispatch, clean vehicles, and direct communication within an approximate 2 km service area around the station.",
-    "p1Title": "How we operate",
-    "p1Text": "Our priority is dispatching quickly in nearby areas and giving clear updates about availability. Phone and WhatsApp lines stay active throughout the day.",
-    "p2Title": "What matters to us",
-    "p2Text": "Passenger safety, vehicle cleanliness, and calm driving standards are not extras for us. Even on short rides, we aim to keep the experience orderly and respectful.",
-    "p3Title": "Service area",
-    "p3Text": "Our standard service area is the approximate 2 km zone around Kenan Evren. Requests from farther points are reviewed based on real-time availability.",
-    "factsLabel": "Quick Notes",
-    "fact1": "24/7 phone and WhatsApp access",
-    "fact2": "Approximate 8-12 minute dispatch target",
-    "fact3": "Approximate 2 km core service area",
-    "cta": "Call Now"
+    "kicker": "Corporate",
+    "title": "An innovative and comfortable approach to transport in Adana",
+    "intro": "At Kenan Evren Sultan Taxi, we do not just move you from point A to B; we transform the entire travel experience into a safe, transparent, and refined journey.",
+    "p1Title": "Our Service Philosophy",
+    "p1Text": "Uninterrupted and high-quality transportation requires professionalism above all. We shape our driver network and vehicle standards with this mindset.",
+    "p2Title": "Trust and Prestige",
+    "p2Text": "In-cabin order, maintenance standards, and respectful communication are the strict criteria our passengers expect from us. We aim to offer a premium experience even on the shortest rides.",
+    "p3Title": "24/7 Availability",
+    "p3Text": "Regardless of the time, you can reach us instantly via phone and WhatsApp, just as if you had a dedicated concierge.",
+    "factsLabel": "Service Standards",
+    "fact1": "Experienced and highly-referenced driver team",
+    "fact2": "Regularly maintained and hygienic vehicles",
+    "fact3": "Clear communication and ETA updates",
+    "fact4": "The same high level of care regardless of short or long distances",
+    "cta": "Book / Call Now"
   },
   "galleryPage": {
     "kicker": "Gallery",
     "title": "A closer look at the car, the area, and the ride experience",
-    "intro": "We brought together exterior, interior, and surrounding-area images on this page to help you get to know Kenan Evren Sultan Taxi better.",
+    "intro": "We brought together exterior, interior, and surrounding-area images on this page to help you get a clearer feel for Kenan Evren Sultan Taxi.",
     "heroLabel": "Featured vehicle view",
     "heroCaption": "The main frame that combines the car, its identity, and how clearly it stands out in the area.",
     "sequenceTitle": "Exterior views",
-    "sequenceIntro": "Selected exterior frames moving from tighter angles to more open street views.",
+    "sequenceIntro": "Selected exterior photos showing the taxi vehicle in the Kenan Evren area, moving from closer angles to wider street views.",
     "interiorTitle": "Interior view",
-    "interiorIntro": "Selected interior frames that show the cabin layout and ride atmosphere.",
+    "interiorIntro": "Selected interior photos that show cabin order, cleanliness, and the overall ride atmosphere more clearly.",
     "interiorBadge": "Interior",
     "finalTitle": "Wider area shots",
-    "finalIntro": "More distant frames that show how the taxi appears within its surrounding area.",
+    "finalIntro": "More distant frames showing how the taxi appears within the area it serves and how visible it is nearby.",
     "cta": "Call Now"
   }
 }
