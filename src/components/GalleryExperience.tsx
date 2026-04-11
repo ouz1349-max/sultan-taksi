@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type GalleryItem = {
   src: string;
@@ -88,6 +89,7 @@ export default function GalleryExperience({
 }: GalleryExperienceProps) {
   const allImages = useMemo(() => [...exteriorShots, ...interiorShots, ...wideShots], [exteriorShots, interiorShots, wideShots]);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [direction, setDirection] = useState(0);
 
   const activeImage = activeIndex === null ? null : allImages[activeIndex];
   const canGoPrev = activeIndex !== null && activeIndex > 0;
@@ -104,9 +106,11 @@ export default function GalleryExperience({
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") setActiveIndex(null);
       if (event.key === "ArrowLeft" && canGoPrev) {
+        setDirection(-1);
         setActiveIndex((current) => (current === null ? current : Math.max(current - 1, 0)));
       }
       if (event.key === "ArrowRight" && canGoNext) {
+        setDirection(1);
         setActiveIndex((current) => (current === null ? current : Math.min(current + 1, allImages.length - 1)));
       }
     };
@@ -119,6 +123,7 @@ export default function GalleryExperience({
   }, [activeIndex, canGoPrev, canGoNext, allImages.length]);
 
   const step = (delta: number) => {
+    setDirection(delta);
     setActiveIndex((current) => {
       if (current === null) return current;
       const next = current + delta;
@@ -129,6 +134,24 @@ export default function GalleryExperience({
 
   const interiorStart = exteriorShots.length;
   const wideStart = exteriorShots.length + interiorShots.length;
+
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1
+    },
+    exit: (direction: number) => ({
+      x: direction < 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.95
+    })
+  };
 
   return (
     <main className="site-shell bg-bg-secondary pt-32 pb-24">
@@ -158,7 +181,10 @@ export default function GalleryExperience({
               <GalleryFigure
                 key={item.src}
                 item={item}
-                onOpen={() => setActiveIndex(index)}
+                onOpen={() => {
+                  setDirection(0);
+                  setActiveIndex(index);
+                }}
                 priority={index < 2}
               />
             ))}
@@ -183,7 +209,10 @@ export default function GalleryExperience({
               <GalleryFigure
                 key={item.src}
                 item={item}
-                onOpen={() => setActiveIndex(interiorStart + index)}
+                onOpen={() => {
+                  setDirection(0);
+                  setActiveIndex(interiorStart + index);
+                }}
               />
             ))}
           </div>
@@ -207,7 +236,10 @@ export default function GalleryExperience({
               <GalleryFigure
                 key={item.src}
                 item={item}
-                onOpen={() => setActiveIndex(wideStart + index)}
+                onOpen={() => {
+                  setDirection(0);
+                  setActiveIndex(wideStart + index);
+                }}
               />
             ))}
           </div>
@@ -215,50 +247,98 @@ export default function GalleryExperience({
       )}
 
       {/* Fullscreen Overlay Modal */}
-      {activeImage ? (
-        <div className="fixed inset-0 z-[120] bg-black/95 backdrop-blur-md">
-          <button type="button" onClick={() => setActiveIndex(null)} className="absolute inset-0 z-[120] h-full w-full" aria-label={locale === "tr" ? "Görseli kapat" : "Close image"} />
+      <AnimatePresence>
+        {activeIndex !== null && activeImage && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[120] bg-black/95 backdrop-blur-md"
+          >
+            <button type="button" onClick={() => setActiveIndex(null)} className="absolute inset-0 z-[120] h-full w-full" aria-label={locale === "tr" ? "Görseli kapat" : "Close image"} />
 
-          <div className="absolute inset-0 z-[121] flex items-center justify-center px-4 py-8 md:px-12 md:py-12">
-            <button
-              type="button"
-              onClick={() => step(-1)}
-              disabled={!canGoPrev}
-              className="mr-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex"
-              aria-label={locale === "tr" ? "Önceki görsel" : "Previous image"}
-            >
-              <ChevronLeft size={24} />
-            </button>
+            <div className="absolute inset-0 z-[121] flex items-center justify-center px-4 py-8 md:px-12 md:py-12 pointer-events-none">
+              <button
+                type="button"
+                onClick={() => step(-1)}
+                disabled={!canGoPrev}
+                className="mr-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex pointer-events-auto"
+                aria-label={locale === "tr" ? "Önceki görsel" : "Previous image"}
+              >
+                <ChevronLeft size={24} />
+              </button>
 
-            <div className="w-full max-w-5xl flex flex-col items-center">
-              <div className="relative w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#0b0d13] shadow-[0_30px_90px_rgba(0,0,0,0.65)] md:rounded-[1.75rem]">
-                <button
-                  type="button"
-                  onClick={() => setActiveIndex(null)}
-                  className="absolute right-3 top-3 z-[122] inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 md:right-4 md:top-4"
-                  aria-label={locale === "tr" ? "Kapat" : "Close"}
-                >
-                  <X size={20} />
-                </button>
-                <div className="relative aspect-[4/3] w-full md:aspect-[16/10]">
-                  <Image key={activeImage.src} src={activeImage.src} alt={activeImage.alt} fill unoptimized className="object-contain" sizes="100vw" priority />
+              <div className="w-full max-w-5xl flex flex-col items-center pointer-events-auto">
+                <div className="relative w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-[#0b0d13] shadow-[0_30px_90px_rgba(0,0,0,0.65)] md:rounded-[1.75rem]">
+                  <button
+                    type="button"
+                    onClick={() => setActiveIndex(null)}
+                    className="absolute right-3 top-3 z-[122] inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 md:right-4 md:top-4"
+                    aria-label={locale === "tr" ? "Kapat" : "Close"}
+                  >
+                    <X size={20} />
+                  </button>
+                  
+                  <motion.div
+                    key={activeIndex}
+                    custom={direction}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{
+                      x: { type: "spring", stiffness: 300, damping: 30 },
+                      opacity: { duration: 0.2 }
+                    }}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.5}
+                    onDragEnd={(e, { offset, velocity }) => {
+                      const swipe = Math.abs(offset.x) > 50 && Math.abs(velocity.x) > 500;
+                      if (swipe && offset.x > 0 && canGoPrev) {
+                        step(-1);
+                      } else if (swipe && offset.x < 0 && canGoNext) {
+                        step(1);
+                      }
+                    }}
+                    className="relative aspect-[4/3] w-full md:aspect-[16/10] cursor-grab active:cursor-grabbing touch-pan-y"
+                  >
+                    <Image 
+                      src={activeImage.src} 
+                      alt={activeImage.alt} 
+                      fill 
+                      unoptimized 
+                      className="object-contain pointer-events-none select-none" 
+                      sizes="100vw" 
+                      priority 
+                    />
+                  </motion.div>
                 </div>
+                {activeImage.caption ? (
+                  <motion.p 
+                    key={`caption-${activeIndex}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-6 max-w-3xl text-center text-[0.95rem] leading-7 text-white/80 md:text-base"
+                  >
+                    {activeImage.caption}
+                  </motion.p>
+                ) : null}
               </div>
-              {activeImage.caption ? <p className="mt-6 max-w-3xl text-center text-[0.95rem] leading-7 text-white/80 md:text-base">{activeImage.caption}</p> : null}
-            </div>
 
-            <button
-              type="button"
-              onClick={() => step(1)}
-              disabled={!canGoNext}
-              className="ml-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex"
-              aria-label={locale === "tr" ? "Sonraki görsel" : "Next image"}
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
-        </div>
-      ) : null}
+              <button
+                type="button"
+                onClick={() => step(1)}
+                disabled={!canGoNext}
+                className="ml-4 hidden h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:border-gold/50 hover:text-gold hover:bg-black/90 disabled:cursor-not-allowed disabled:opacity-20 md:inline-flex pointer-events-auto"
+                aria-label={locale === "tr" ? "Sonraki görsel" : "Next image"}
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
