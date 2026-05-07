@@ -117,6 +117,34 @@ export default async function GuideDetailPage({ params }: Props) {
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-text/70 md:text-lg text-balance">
             {content.intro}
           </p>
+          <div className="mt-7 flex flex-wrap gap-3 text-sm font-semibold">
+            <Link
+              href={`/${locale}/galeri`}
+              className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 px-4 py-2 text-text/72 transition-colors hover:border-gold/30 hover:text-gold"
+            >
+              {isTr ? 'Araç fotoğrafları' : 'Vehicle photos'}
+            </Link>
+            <Link
+              href={`/${locale}/hakkimizda`}
+              className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 px-4 py-2 text-text/72 transition-colors hover:border-gold/30 hover:text-gold"
+            >
+              {isTr ? 'Hakkımızda' : 'About us'}
+            </Link>
+            <Link
+              href={`/${locale}#konum`}
+              className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 px-4 py-2 text-text/72 transition-colors hover:border-gold/30 hover:text-gold"
+            >
+              {isTr ? 'Konum ve hizmet alanı' : 'Location and service area'}
+            </Link>
+            <a
+              href="https://maps.google.com/?q=Kenan%20Evren%20Sultan%20Taksi%20Adana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[40px] items-center rounded-full border border-white/10 px-4 py-2 text-text/72 transition-colors hover:border-gold/30 hover:text-gold"
+            >
+              {isTr ? 'Google Maps' : 'Google Maps'}
+            </a>
+          </div>
           <div className="mt-6">
             <GuideMetaRow
               locale={locale}
@@ -279,10 +307,10 @@ export default async function GuideDetailPage({ params }: Props) {
                 {isTr ? 'Hemen ara' : 'Call now'}
               </a>
               <Link
-                href={`/${locale}/duyurular`}
+                href={`/${locale}/galeri`}
                 className="inline-flex min-h-[56px] items-center gap-2 rounded-full border-2 border-black/10 px-8 py-4 text-base font-bold text-black transition-colors hover:bg-black/5"
               >
-                {isTr ? 'Duyuruları gör' : 'View announcements'}
+                {isTr ? 'Galeriyi gör' : 'View gallery'}
                 <ArrowRight size={20} />
               </Link>
             </div>

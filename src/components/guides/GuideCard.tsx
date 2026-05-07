@@ -19,8 +19,8 @@ export default function GuideCard({ guide, locale, featured = false, compact = f
   /* ── FEATURED: Tam genişlik, görsel sağda metin solda ── */
   if (featured) {
     return (
-      <article className="group relative overflow-hidden rounded-[2rem] bg-white/[0.03] border border-white/[0.07] transition-colors hover:border-gold/20">
-        <Link href={href} className="grid lg:grid-cols-[1fr_1fr] min-h-[420px]">
+      <article className="group relative overflow-hidden transition-all">
+        <Link href={href} className="grid min-h-[420px] lg:grid-cols-[1fr_1fr]">
           {/* Sol: İçerik */}
           <div className="flex flex-col justify-between p-8 lg:p-10">
             <div>
@@ -49,7 +49,7 @@ export default function GuideCard({ guide, locale, featured = false, compact = f
           </div>
 
           {/* Sağ: Görsel */}
-          <div className="relative min-h-[260px] lg:min-h-0 overflow-hidden">
+          <div className="relative min-h-[300px] overflow-hidden lg:min-h-0">
             <Image
               src={guide.heroImage}
               alt={content.heroImageAlt}
@@ -99,8 +99,8 @@ export default function GuideCard({ guide, locale, featured = false, compact = f
 
   /* ── STANDART: Dikey kartlar (grid içinde) ── */
   return (
-    <article className="group flex flex-col overflow-hidden rounded-[1.6rem] bg-white/[0.03] border border-white/[0.06] transition-all hover:border-gold/20 hover:bg-white/[0.05]">
-      <Link href={href} className="block relative aspect-[16/10] overflow-hidden">
+    <article className="group flex flex-col">
+      <Link href={href} className="relative block aspect-[16/10] overflow-hidden rounded-xl">
         <Image
           src={guide.heroImage}
           alt={content.heroImageAlt}
@@ -117,7 +117,7 @@ export default function GuideCard({ guide, locale, featured = false, compact = f
         </div>
       </Link>
 
-      <div className="flex flex-col flex-1 p-6">
+      <div className="flex flex-1 flex-col pt-6">
         <div className="flex items-center gap-3 text-[0.72rem] text-text/45 mb-3">
           <span className="flex items-center gap-1">
             <Clock size={10} />

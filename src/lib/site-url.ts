@@ -6,6 +6,12 @@ function normalizeSiteUrl(value: string) {
 }
 
 export function getSiteUrl() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || FALLBACK_SITE_URL;
+  const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL;
+
+  if (!configuredSiteUrl && process.env.VERCEL_ENV === 'production') {
+    throw new Error('Production deploy requires NEXT_PUBLIC_SITE_URL or SITE_URL.');
+  }
+
+  const siteUrl = configuredSiteUrl || FALLBACK_SITE_URL;
   return normalizeSiteUrl(siteUrl);
 }

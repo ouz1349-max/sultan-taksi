@@ -1,38 +1,38 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import GalleryExperience from '@/components/GalleryExperience';
+import { getSiteUrl } from '@/lib/site-url';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sultantaksi.com';
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'galleryPage' });
+  const siteUrl = getSiteUrl();
 
   return {
     title: locale === 'tr' ? 'Galeri | Kenan Evren Sultan Taksi' : 'Gallery | Kenan Evren Sultan Taxi',
     description: t('intro'),
     category: 'LocalBusiness',
     alternates: {
-      canonical: `${SITE_URL}/${locale}/galeri`,
+      canonical: `${siteUrl}/${locale}/galeri`,
       languages: {
-        tr: `${SITE_URL}/tr/galeri`,
-        en: `${SITE_URL}/en/galeri`,
+        tr: `${siteUrl}/tr/galeri`,
+        en: `${siteUrl}/en/galeri`,
       },
     },
     openGraph: {
       title: locale === 'tr' ? 'Galeri | Kenan Evren Sultan Taksi' : 'Gallery | Kenan Evren Sultan Taxi',
       description: t('intro'),
       siteName: 'Kenan Evren Sultan Taksi',
-      url: `${SITE_URL}/${locale}/galeri`,
+      url: `${siteUrl}/${locale}/galeri`,
       locale: locale === 'tr' ? 'tr_TR' : 'en_US',
       type: 'website',
       images: [
         {
-          url: `${SITE_URL}/images/gallery/adana-kenan-evren-sultan-taksi-dis-cekim-01.webp`,
+          url: `${siteUrl}/images/gallery/adana-kenan-evren-sultan-taksi-dis-cekim-01.webp`,
           width: 1200,
           height: 900,
           alt: locale === 'tr' ? 'Kenan Evren Sultan Taksi galeri görseli' : 'Kenan Evren Sultan Taxi gallery image',
@@ -46,6 +46,7 @@ export default async function GalleryPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'galleryPage' });
+  const siteUrl = getSiteUrl();
 
   const exteriorShots = [
     {
@@ -104,7 +105,7 @@ export default async function GalleryPage({ params }: Props) {
     publisher: {
       '@type': 'LocalBusiness',
       name: 'Kenan Evren Sultan Taksi',
-      image: `${SITE_URL}/images/gallery/adana-kenan-evren-sultan-taksi-dis-cekim-01.webp`,
+      image: `${siteUrl}/images/gallery/adana-kenan-evren-sultan-taksi-dis-cekim-01.webp`,
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Çukurova',
@@ -114,7 +115,7 @@ export default async function GalleryPage({ params }: Props) {
     },
     image: [...exteriorShots, ...interiorShots, ...wideShots].map(shot => ({
       '@type': 'ImageObject',
-      url: `${SITE_URL}${shot.src}`,
+      url: `${siteUrl}${shot.src}`,
       caption: shot.caption,
       name: shot.alt,
       contentLocation: {

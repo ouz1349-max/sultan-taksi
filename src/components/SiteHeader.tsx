@@ -14,11 +14,6 @@ const SiteHeader = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu when route changes
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [pathname]);
-
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
@@ -40,7 +35,6 @@ const SiteHeader = () => {
     { href: '/galeri', label: nav('gallery') },
     { href: '/rehberler', label: nav('guides') },
     { href: '/hakkimizda', label: nav('about') },
-    { href: '/duyurular', label: nav('announcements') },
   ];
 
   return (
@@ -116,6 +110,7 @@ const SiteHeader = () => {
                       <Link
                         href={item.href}
                         locale={locale}
+                        onClick={() => setIsMenuOpen(false)}
                         className={`text-3xl font-bold tracking-tight ${active ? 'text-gold' : 'text-text/60'}`}
                       >
                         {item.label}
@@ -133,10 +128,10 @@ const SiteHeader = () => {
                   className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gold py-5 text-lg font-bold text-black shadow-[0_12px_40px_rgba(215,176,91,0.25)]"
                 >
                   <MessageCircle size={22} />
-                  WhatsApp Destek
+                  {nav('whatsappSupport')}
                 </a>
                 <p className="mt-6 text-center text-sm text-text/40 italic">
-                  7/24 Kesintisiz Hizmet
+                  {locale === 'tr' ? '7/24 Kesintisiz Hizmet' : '24/7 Service'}
                 </p>
               </div>
             </div>

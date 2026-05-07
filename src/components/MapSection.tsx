@@ -8,7 +8,7 @@ const MapSection = () => {
   const t = useTranslations('map');
 
   return (
-    <section className="py-24 bg-bg-primary overflow-hidden relative">
+    <section id="konum" className="py-24 bg-bg-primary overflow-hidden relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_85%,rgba(215,176,91,0.12),transparent_42%)]" />
 
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">

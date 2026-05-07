@@ -53,7 +53,7 @@ export default async function GuidesPage({ params }: Props) {
     <main className="site-shell min-h-screen bg-bg-secondary pt-32">
 
       {/* ── Hero Başlık ── */}
-      <section className="container mx-auto max-w-6xl px-6 pb-14">
+      <section className="container mx-auto max-w-6xl px-6 pb-20">
         <div className="max-w-2xl">
           <p className="section-kicker mb-4">{isTr ? 'Rehber Merkezi' : 'Guide Hub'}</p>
           <h1 className="font-display text-4xl font-bold leading-[1.0] tracking-[-0.05em] text-white md:text-[3.8rem]">
@@ -68,13 +68,13 @@ export default async function GuidesPage({ params }: Props) {
       </section>
 
       {/* ── Öne Çıkan Rehber ── */}
-      <section className="container mx-auto max-w-6xl px-6 pb-16">
+      <section className="container mx-auto max-w-6xl px-6 pb-24">
         <GuideCard guide={featuredGuide} locale={locale} featured />
       </section>
 
       {/* ── Tüm Rehberler (Blog Mantığı: Eşit Grid ve Filtreli) ── */}
       {remainingGuides.length > 0 && (
-        <section className="container mx-auto max-w-6xl px-6 pb-20">
+        <section className="container mx-auto max-w-6xl px-6 pb-32">
           <GuidesList guides={remainingGuides} locale={locale} isTr={isTr} />
         </section>
       )}

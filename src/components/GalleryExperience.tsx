@@ -39,15 +39,15 @@ function GalleryFigure({
   priority?: boolean;
 }) {
   return (
-    <figure className="group flex flex-col h-full">
+    <figure className="group flex h-full flex-col">
       <button 
         type="button" 
         onClick={onOpen} 
         className="block w-full text-left" 
         aria-label={item.alt}
       >
-        <div className="relative overflow-hidden rounded-[1.5rem] bg-white/5 shadow-sm transition-all duration-500 group-hover:shadow-[0_8px_30px_rgba(234,179,8,0.08)] ring-1 ring-white/5">
-          <div className="relative aspect-[4/3] w-full bg-[#0d1017]">
+        <div className="relative overflow-hidden rounded-xl bg-black transition-transform duration-500 group-hover:-translate-y-1">
+          <div className="relative aspect-[4/3] w-full bg-[#0d1017] md:aspect-[5/4]">
             <Image
               src={item.src}
               alt={item.alt}
@@ -63,11 +63,11 @@ function GalleryFigure({
           </div>
         </div>
       </button>
-      {item.caption && (
-        <figcaption className="mt-5 text-[0.95rem] leading-7 text-text/70 px-2 flex-grow">
+      {item.caption ? (
+        <figcaption className="mt-4 max-w-[34rem] flex-grow px-1 text-[0.92rem] leading-7 text-text/64">
           {item.caption}
         </figcaption>
-      )}
+      ) : null}
     </figure>
   );
 }
@@ -157,7 +157,7 @@ export default function GalleryExperience({
   return (
     <main className="site-shell bg-bg-secondary pt-32 pb-24">
       {/* Header Section */}
-      <section className="container mx-auto max-w-6xl px-6 pb-20 text-center">
+      <section className="container mx-auto max-w-6xl px-6 pb-16 text-center">
         <p className="section-kicker mb-4 mx-auto">{kicker}</p>
         <h1 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-[1.1] tracking-[-0.04em] text-white md:text-[4rem]">
           {title}
@@ -168,16 +168,16 @@ export default function GalleryExperience({
       {/* Exterior Shots */}
       {exteriorShots.length > 0 && (
         <section className="container mx-auto max-w-6xl px-6 pb-24">
-          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+          <div className="mb-10 text-center md:text-left">
             <p className="section-kicker mb-3 md:mx-0 mx-auto">{exteriorTitle}</p>
             <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
-              Ortama Uyum Sağlayan Tasarım
+              {locale === "tr" ? "Aracı çevresiyle birlikte görün" : "See the vehicle in its setting"}
             </h2>
             <p className="max-w-2xl text-base leading-8 text-text/74 mx-auto md:mx-0">
               {exteriorIntro}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-16">
             {exteriorShots.map((item, index) => (
               <GalleryFigure
                 key={item.src}
@@ -196,7 +196,7 @@ export default function GalleryExperience({
       {/* Interior Shots */}
       {interiorShots.length > 0 && (
         <section className="container mx-auto max-w-6xl px-6 pb-24">
-          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+          <div className="mb-10 text-center md:text-left">
             <p className="section-kicker mb-3 md:mx-0 mx-auto">{interiorBadge}</p>
             <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
               {interiorTitle}
@@ -205,7 +205,7 @@ export default function GalleryExperience({
               {interiorIntro}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-16">
             {interiorShots.map((item, index) => (
               <GalleryFigure
                 key={item.src}
@@ -223,16 +223,16 @@ export default function GalleryExperience({
       {/* Wide Shots */}
       {wideShots.length > 0 && (
         <section className="container mx-auto max-w-6xl px-6 pb-12">
-          <div className="mb-12 text-center md:text-left border-b border-white/5 pb-8">
+          <div className="mb-10 text-center md:text-left">
             <p className="section-kicker mb-3 md:mx-0 mx-auto">{finalTitle}</p>
             <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white mb-4">
-              Her Noktada Görünürlük
+              {locale === "tr" ? "Bölge içinde doğal görünüm" : "Natural presence in the area"}
             </h2>
             <p className="max-w-2xl text-base leading-8 text-text/74 mx-auto md:mx-0">
               {finalIntro}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-16">
             {wideShots.map((item, index) => (
               <GalleryFigure
                 key={item.src}

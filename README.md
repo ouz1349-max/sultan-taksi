@@ -8,7 +8,7 @@ Not: canonical / metadata / robots / sitemap için production host fallback olar
 
 ## Proje Özeti
 
-- Stack: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4, Framer Motion, next-intl
+- Stack: Next.js 16.1.1 (App Router), React 19.2.5, TypeScript, Tailwind CSS v4, Framer Motion, next-intl
 - Amaç: Kullanıcıyı hızlı şekilde telefon veya WhatsApp iletişimine yönlendirmek
 - Dil: Türkçe (`/tr`) ve İngilizce (`/en`)
 - Tasarım: Premium koyu tema, mobil öncelikli dönüşüm yerleşimi

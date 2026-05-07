@@ -1,6 +1,6 @@
 # Codex Technical Log (Chronological)
 
-This file stores chronological implementation notes that are more detailed than `proje g?nl???.md`.
+This file stores chronological implementation notes that are more detailed than `proje günlüğü.md`.
 
 ## 2026-03-22
 
@@ -19,7 +19,7 @@ This file stores chronological implementation notes that are more detailed than 
 - Visual polish and symmetry pass completed for Hero and section layouts.
 - Repository moved to root path and README reworked for GitHub landing page.
 - Central project memory files introduced and updated:
-  - `proje g?nl???.md`
+  - `proje günlüğü.md`
   - `codex.md`
 
 ## 2026-03-26
@@ -73,7 +73,7 @@ This file stores chronological implementation notes that are more detailed than 
 - Main failure reasons:
   - Turkish characters broke in visible UI
   - inner pages became denser instead of lighter
-  - ?more professional? was interpreted as ?more panels, more meta, more helper strips?
+  - "more professional" was interpreted as "more panels, more meta, more helper strips"
 - A second corrective sprint focused on reducing panel dependence and repairing encoding-sensitive files.
 
 ### Current technical reality

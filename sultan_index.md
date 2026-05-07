@@ -1,45 +1,37 @@
 # Sultan Taksi Index
 
-Bu dosya, proje haf?zas?n?n giri? noktas?d?r. Sultan Taksi projesinde teknik durum, i?erik standartlar? ve a??k sorunlar i?in ?nce bu dosyaya bak?l?r.
+Bu dosya, proje hafızasının giriş noktasıdır. Sultan Taksi projesinde teknik durum, içerik standartları ve açık sorunlar için önce buraya bakılır.
 
-## Ana Haf?za Dosyalar?
+## Ana Hafıza Dosyaları
 
 1. [project_memory.md](/F:/Belgeler/sultantaksi/project_memory.md)
-- G?ncel teknik yap?, SEO host kurallar?, sayfa mimarisi ve a??k sorunlar.
+- Güncel teknik yapı, SEO host kuralları, sayfa mimarisi ve kalite kapısı.
 
-2. [proje g?nl???.md](/F:/Belgeler/sultantaksi/proje%20g?nl???.md)
-- Tarihsel de?i?iklik ak??? ve son sprintlerin sonu?lar?.
+2. [proje günlüğü.md](/F:/Belgeler/sultantaksi/proje%20günlüğü.md)
+- Tarihsel değişiklik akışı ve son sprintlerin sonuçları.
 
 3. [codex.md](/F:/Belgeler/sultantaksi/codex.md)
-- Daha teknik ve kronolojik implementasyon notlar?.
+- Daha teknik ve kronolojik implementasyon notları.
 
 4. [i18n_guidelines.md](/F:/Belgeler/sultantaksi/i18n_guidelines.md)
-- TR/EN i?erik ?retim ve g?ncelleme kurallar?.
+- TR/EN içerik üretim ve güncelleme kuralları.
 
 5. [content_checklist.md](/F:/Belgeler/sultantaksi/content_checklist.md)
-- Yeni sayfa, rehber, duyuru veya yasal i?erik eklerken kullan?lacak kontrol listesi.
+- Yeni sayfa, rehber, duyuru veya yasal içerik eklerken kullanılacak kontrol listesi.
 
 6. [sultansss.md](/F:/Belgeler/sultantaksi/sultansss.md)
-- Merkezi SSS kayna??.
+- Merkezi SSS kaynağı.
 
-## Source Of Truth
+## Güncel Kritik Notlar
 
-- G?ncel ?r?n/proje durumu: [project_memory.md](/F:/Belgeler/sultantaksi/project_memory.md)
-- Tarihsel kay?t: [proje g?nl???.md](/F:/Belgeler/sultantaksi/proje%20g?nl???.md)
-- Teknik kronoloji: [codex.md](/F:/Belgeler/sultantaksi/codex.md)
-- SSS kayna??: [sultansss.md](/F:/Belgeler/sultantaksi/sultansss.md)
+1. Deploy öncesi `NEXT_PUBLIC_SITE_URL` veya `SITE_URL` zorunludur.
+2. Türkçe karakter bozulması bu projede sıfır toleranslı sorundur.
+3. Rehberler, galeri ve hakkında sayfaları kuruludur; kalite odağı daha az panel, daha güçlü yerel içerik ve daha temiz görsel ritimdir.
+4. "Daha profesyonel" hedefi burada daha çok blok eklemek değil, daha az ama daha güçlü yüzeyler kullanmak anlamına gelir.
 
-## G?ncel Kritik Notlar
+## Şu Anki Öncelikli Açık Alanlar
 
-1. Deploy ?ncesi `NEXT_PUBLIC_SITE_URL` veya `SITE_URL` zorunludur.
-2. T?rk?e karakter bozulmas? bu projede s?f?r toleransl? sorundur.
-3. Rehberler, galeri ve hakk?nda sayfalar? kurulmu?tur ama g?rsel kalite hedefi i?in h?l? son cilaya ihtiya? vard?r.
-4. ?Daha profesyonel? hedefi burada daha ?ok blok eklemek de?il, daha az ama daha g??l? y?zeyler kullanmak anlam?na gelir.
-
-## ?u Anki ?ncelikli A??k Alanlar
-
-1. Rehber detail sayfalar?n? biraz daha editoryal ve daha az kontroll? hale getirmek
-2. Rehberler liste sayfas?n? i?erik vitrini hissine yakla?t?rmak
-3. Galeride foto?raf? ?er?eveden daha bask?n yapmak
-4. Hakk?m?zda sayfas?nda daha karakterli ama sade bir marka anlat?s? kurmak
-5. Her i?erik turu sonras? UTF-8 / mojibake taramas? yapmak
+1. Rehber liste ve detay sayfalarını daha editoryal tutmak
+2. Galeride fotoğrafı çerçeveden daha baskın yapmak
+3. Hakkımızda sayfasında daha karakterli ama sade bir marka anlatısı kurmak
+4. Her içerik turu sonrası UTF-8 / mojibake taraması yapmak

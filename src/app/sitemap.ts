@@ -5,15 +5,31 @@ import { getSiteUrl } from '@/lib/site-url';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
   const locales = ['tr', 'en'] as const;
+  const staticLastModified = new Date('2026-04-12');
   const localizedPaths = ['', '/galeri', '/rehberler', '/hakkimizda', '/duyurular', '/kvkk', '/cerez-politikasi'];
-  const guidePaths = guides.map((guide) => `/rehberler/${guide.slug}`);
+  const staticEntries = locales.flatMap((locale) =>
+    localizedPaths.map((path) => {
+      let changeFrequency: 'weekly' | 'monthly' | 'yearly' = 'monthly';
+      if (path === '') changeFrequency = 'weekly';
+      else if (path === '/kvkk' || path === '/cerez-politikasi') changeFrequency = 'yearly';
 
-  return locales.flatMap((locale) =>
-    [...localizedPaths, ...guidePaths].map((path) => ({
-      url: `${baseUrl}/${locale}${path}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: path === '' ? 1 : path.startsWith('/rehberler/') ? 0.7 : 0.6,
+      return {
+        url: `${baseUrl}/${locale}${path}`,
+        lastModified: staticLastModified,
+        changeFrequency,
+        priority: path === '' ? 1 : 0.6,
+      };
+    })
+  );
+
+  const guideEntries = locales.flatMap((locale) =>
+    guides.map((guide) => ({
+      url: `${baseUrl}/${locale}/rehberler/${guide.slug}`,
+      lastModified: new Date(guide.updatedAt || guide.publishedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     }))
   );
+
+  return [...staticEntries, ...guideEntries];
 }
