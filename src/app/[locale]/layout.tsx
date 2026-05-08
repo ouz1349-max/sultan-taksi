@@ -4,6 +4,7 @@ import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import MobileActionBar from '@/components/MobileActionBar';
 import SiteHeader from '@/components/SiteHeader';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { Playfair_Display, Barlow } from 'next/font/google';
 import "../globals.css";
 
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <SiteHeader />
           {children}
+          <WhatsAppButton />
           <MobileActionBar />
         </NextIntlClientProvider>
       </body>

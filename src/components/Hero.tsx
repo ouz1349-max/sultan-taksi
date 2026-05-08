@@ -32,7 +32,7 @@ const Hero = () => {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         aria-hidden="true"
         onPlay={handleVideoPlay}
       >
@@ -83,7 +83,7 @@ const Hero = () => {
             transition={{ delay: 0.38, duration: 0.55 }}
           >
             <motion.a
-              href="tel:05302227795"
+              href="tel:+905302227795"
               className="shine-button flex min-h-[58px] w-full items-center justify-center gap-3 rounded-full bg-gold px-10 py-4 text-base font-bold text-black shadow-[0_14px_36px_rgba(215,176,91,0.38)] transition-all duration-300 hover:bg-gold-light sm:w-auto"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.96 }}

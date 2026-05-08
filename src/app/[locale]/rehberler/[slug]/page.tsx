@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, Phone } from 'lucide-react';
 import ContactFooter from '@/components/ContactFooter';
 import GuideCard from '@/components/guides/GuideCard';
@@ -33,32 +33,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return {};
 
   const content = locale === 'tr' ? guide.tr : guide.en;
+  const siteUrl = getSiteUrl();
+  const path = `/${locale}/rehberler/${slug}`;
 
   return {
     title: `${content.title} | ${locale === 'tr' ? 'Rehberler' : 'Guides'} | Kenan Evren Sultan ${locale === 'tr' ? 'Taksi' : 'Taxi'}`,
     description: content.seoDescription,
     alternates: {
-      canonical: `/${locale}/rehberler/${slug}`,
+      canonical: `${siteUrl}${path}`,
       languages: {
-        tr: `/tr/rehberler/${slug}`,
-        en: `/en/rehberler/${slug}`,
+        tr: `${siteUrl}/tr/rehberler/${slug}`,
+        en: `${siteUrl}/en/rehberler/${slug}`,
       },
     },
     openGraph: {
       title: content.title,
       description: content.seoDescription,
-      url: `/${locale}/rehberler/${slug}`,
+      url: `${siteUrl}${path}`,
       type: 'article',
       images: [
         guide.ogImage
           ? {
-              url: guide.ogImage,
+              url: `${siteUrl}${guide.ogImage}`,
               width: 1200,
               height: 630,
               alt: content.heroImageAlt,
             }
           : {
               ...defaultOgImage,
+              url: `${siteUrl}${defaultOgImage.url}`,
               alt: content.heroImageAlt,
             },
       ],
@@ -76,7 +79,6 @@ export default async function GuideDetailPage({ params }: Props) {
   const isTr = locale === 'tr';
   const content = isTr ? guide.tr : guide.en;
   const relatedGuides = getRelatedGuides(slug);
-  const common = await getTranslations({ locale, namespace: 'common' });
   const siteUrl = getSiteUrl();
 
   const articleJsonLd = buildGuideArticleJsonLd({ siteUrl, locale, guide });
@@ -300,7 +302,7 @@ export default async function GuideDetailPage({ params }: Props) {
             </div>
             <div className="flex flex-wrap gap-4">
               <a
-                href={`tel:${common('phone').replace(/\s/g, '')}`}
+                href="tel:+905302227795"
                 className="inline-flex min-h-[56px] items-center gap-2 rounded-full bg-black px-8 py-4 text-base font-bold text-white transition-transform hover:scale-105 active:scale-95 shadow-xl"
               >
                 <Phone size={20} />

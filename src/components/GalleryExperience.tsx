@@ -52,7 +52,6 @@ function GalleryFigure({
               src={item.src}
               alt={item.alt}
               fill
-              unoptimized
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               sizes="(min-width: 1024px) 50vw, 100vw"
               priority={priority}
@@ -308,7 +307,6 @@ export default function GalleryExperience({
                       src={activeImage.src} 
                       alt={activeImage.alt} 
                       fill 
-                      unoptimized 
                       className="object-contain pointer-events-none select-none" 
                       sizes="100vw" 
                       priority 

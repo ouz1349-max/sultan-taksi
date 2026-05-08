@@ -5,8 +5,8 @@ import { getSiteUrl } from '@/lib/site-url';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl();
   const locales = ['tr', 'en'] as const;
-  const staticLastModified = new Date('2026-04-12');
-  const localizedPaths = ['', '/galeri', '/rehberler', '/hakkimizda', '/duyurular', '/kvkk', '/cerez-politikasi'];
+  const staticLastModified = new Date();
+  const localizedPaths = ['', '/galeri', '/rehberler', '/hakkimizda', '/kvkk', '/cerez-politikasi'];
   const staticEntries = locales.flatMap((locale) =>
     localizedPaths.map((path) => {
       let changeFrequency: 'weekly' | 'monthly' | 'yearly' = 'monthly';
@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/${locale}${path}`,
         lastModified: staticLastModified,
         changeFrequency,
-        priority: path === '' ? 1 : 0.6,
+        priority: path === '' ? 1 : path === '/rehberler' ? 0.8 : 0.6,
       };
     })
   );

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { ArrowRight, CalendarDays, Phone } from 'lucide-react';
 import ContactFooter from '@/components/ContactFooter';
+import { getSiteUrl } from '@/lib/site-url';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -19,23 +20,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Kenan Evren Sultan Taksi için nadir operasyon duyuruları, hizmet notları ve güncel bilgilendirmeler.'
     : 'Occasional operating notices, service notes, and current updates for Kenan Evren Sultan Taxi.';
 
+  const siteUrl = getSiteUrl();
+  const path = `/${locale}/duyurular`;
+
   return {
     title,
     description,
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
-      canonical: `/${locale}/duyurular`,
+      canonical: `${siteUrl}${path}`,
       languages: {
-        tr: '/tr/duyurular',
-        en: '/en/duyurular',
+        tr: `${siteUrl}/tr/duyurular`,
+        en: `${siteUrl}/en/duyurular`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `/${locale}/duyurular`,
+      url: `${siteUrl}${path}`,
       images: [
         {
-          url: '/images/hero.webp',
+          url: `${siteUrl}/images/hero.webp`,
           width: 1200,
           height: 630,
           alt: isTr
@@ -51,7 +59,6 @@ export default async function AnnouncementsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const isTr = locale === 'tr';
-  const common = await getTranslations({ locale, namespace: 'common' });
 
   const latestNotice = isTr
     ? {
@@ -187,7 +194,7 @@ export default async function AnnouncementsPage({ params }: Props) {
                   <ArrowRight size={16} />
                 </Link>
                 <a
-                  href={`tel:${common('phone').replace(/\s/g, '')}`}
+                  href="tel:+905302227795"
                   className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-gold/25 px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-black"
                 >
                   <Phone size={16} />

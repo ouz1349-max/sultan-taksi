@@ -31,7 +31,7 @@ export function buildGuideArticleJsonLd({
     articleSection: content.categoryLabel,
     keywords: guide.tags.join(', '),
     author: {
-      '@type': 'Person',
+      '@type': 'Organization',
       name: guide.author,
       description: content.authorRole,
     },

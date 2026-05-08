@@ -49,7 +49,7 @@ export default function GuideCard({ guide, locale, featured = false, compact = f
           </div>
 
           {/* Sağ: Görsel */}
-          <div className="relative min-h-[300px] overflow-hidden lg:min-h-0">
+          <div className="relative min-h-[300px] overflow-hidden rounded-xl lg:min-h-0">
             <Image
               src={guide.heroImage}
               alt={content.heroImageAlt}

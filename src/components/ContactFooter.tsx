@@ -25,7 +25,7 @@ const ContactFooter = () => {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href={`tel:${t('common.phone').replace(/\s/g, '')}`}
+                href="tel:+905302227795"
                 className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-gold-light"
               >
                 <Phone size={16} />
@@ -46,7 +46,7 @@ const ContactFooter = () => {
           <div className="border-t border-gold/10 pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10 xl:pl-14">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gold/75">{t('hero.ctaCall')}</p>
             <div className="space-y-6">
-              <a href={`tel:${t('common.phone').replace(/\s/g, '')}`} className="flex items-center gap-3 text-white transition-colors hover:text-gold">
+              <a href="tel:+905302227795" className="flex items-center gap-3 text-white transition-colors hover:text-gold">
                 <Phone size={18} className="text-gold" />
                 <span className="text-2xl font-bold tracking-[-0.03em]">{t('common.phone')}</span>
               </a>

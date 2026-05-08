@@ -5,6 +5,7 @@ import GuideCard from '@/components/guides/GuideCard';
 import GuidesList from '@/components/guides/GuidesList';
 import { defaultOgImage } from '@/data/seo';
 import { guides } from '@/data/guides';
+import { getSiteUrl } from '@/lib/site-url';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -18,23 +19,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Kenan Evren çevresinden ulaşım, şehir içi rota ve yerel kullanım notlarını bir araya getiren editoryal rehber merkezi.'
     : 'An editorial guide hub collecting route notes, local travel context, and practical taxi guidance around Kenan Evren and Adana.';
 
+  const siteUrl = getSiteUrl();
+  const path = `/${locale}/rehberler`;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/rehberler`,
+      canonical: `${siteUrl}${path}`,
       languages: {
-        tr: '/tr/rehberler',
-        en: '/en/rehberler',
+        tr: `${siteUrl}/tr/rehberler`,
+        en: `${siteUrl}/en/rehberler`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `/${locale}/rehberler`,
+      url: `${siteUrl}${path}`,
       images: [
         {
           ...defaultOgImage,
+          url: `${siteUrl}${defaultOgImage.url}`,
           alt: isTr ? 'Kenan Evren Sultan Taksi rehber merkezi' : 'Kenan Evren Sultan Taxi guide hub',
         },
       ],

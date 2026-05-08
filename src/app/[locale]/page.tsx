@@ -24,24 +24,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Kenan Evren Sultan Taxi | 24/7 Fast and Reliable Transportation';
   const description = hero('subtitle');
   const path = `/${locale}`;
+  const siteUrl = getSiteUrl();
+  const absolutePath = `${siteUrl}${path}`;
 
   return {
     title,
     description,
     alternates: {
-      canonical: path,
+      canonical: absolutePath,
       languages: {
-        tr: '/tr',
-        en: '/en',
+        tr: `${siteUrl}/tr`,
+        en: `${siteUrl}/en`,
       },
     },
     openGraph: {
       title,
       description,
-      url: path,
+      url: absolutePath,
       images: [
         {
-          url: '/images/hero.webp',
+          url: `${siteUrl}/images/hero.webp`,
           width: 1200,
           height: 630,
           alt: locale === 'tr' ? 'Kenan Evren Sultan Taksi ana sayfa görseli' : 'Kenan Evren Sultan Taxi homepage visual',
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: ['/images/hero.webp'],
+      images: [`${siteUrl}/images/hero.webp`],
     },
   };
 }
@@ -65,7 +67,7 @@ export default async function IndexPage({ params }: Props) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'TaxiService'],
     name: 'Kenan Evren Sultan Taksi',
     image: `${siteUrl}/images/hero.webp`,
     '@id': siteUrl,
@@ -91,10 +93,11 @@ export default async function IndexPage({ params }: Props) {
       opens: '00:00',
       closes: '23:59',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '22',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+905302227795',
+      contactType: 'customer service',
+      availableLanguage: ['Turkish', 'English'],
     },
     sameAs: ['https://maps.google.com/?q=Kenan%20Evren%20Sultan%20Taksi%20Adana'],
   };

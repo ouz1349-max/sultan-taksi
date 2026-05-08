@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { ArrowRight, Phone } from 'lucide-react';
 import ContactFooter from '@/components/ContactFooter';
+import { getSiteUrl } from '@/lib/site-url';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -17,23 +18,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? 'Kenan Evren Sultan Taksi’nin yerel hizmet anlayışı, şeffaf iletişim yaklaşımı ve yolculuk standartları.'
     : 'Kenan Evren Sultan Taxi’s local service approach, transparent communication, and ride standards.';
 
+  const siteUrl = getSiteUrl();
+  const path = `/${locale}/hakkimizda`;
+
   return {
     title,
     description,
     alternates: {
-      canonical: `/${locale}/hakkimizda`,
+      canonical: `${siteUrl}${path}`,
       languages: {
-        tr: '/tr/hakkimizda',
-        en: '/en/hakkimizda',
+        tr: `${siteUrl}/tr/hakkimizda`,
+        en: `${siteUrl}/en/hakkimizda`,
       },
     },
     openGraph: {
       title,
       description,
-      url: `/${locale}/hakkimizda`,
+      url: `${siteUrl}${path}`,
       images: [
         {
-          url: '/images/gallery/adana-kenan-evren-sultan-taksi-genis-aci-01.webp',
+          url: `${siteUrl}/images/gallery/adana-kenan-evren-sultan-taksi-genis-aci-01.webp`,
           width: 1200,
           height: 630,
           alt: isTr ? 'Kenan Evren Sultan Taksi hakkında sayfası' : 'Kenan Evren Sultan Taxi about page',
@@ -47,7 +51,6 @@ export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const isTr = locale === 'tr';
-  const common = await getTranslations({ locale, namespace: 'common' });
 
   const principles = isTr
     ? [
@@ -117,7 +120,7 @@ export default async function AboutPage({ params }: Props) {
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
-                href={`tel:${common('phone').replace(/\s/g, '')}`}
+                href="tel:+905302227795"
                 className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-gold-light"
               >
                 <Phone size={16} />
